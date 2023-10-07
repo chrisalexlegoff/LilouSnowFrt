@@ -12,7 +12,7 @@ export interface seoProps {
 }
 
 // Accueil mobile
-interface homeMobileProps {
+export interface homeMobileProps {
   h1Sun: string;
   h2Sun: string;
   h3Sun: string;
@@ -51,4 +51,10 @@ export interface maintenanceDesktopProps {
   titreReseau1: string;
   titreReseau2: string;
   paragraphe1Maintenance: string;
+}
+
+export interface reseauxProps {
+  slug: string[];
+  link?: string[];
+  classname: string;
 }
