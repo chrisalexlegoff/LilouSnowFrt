@@ -1,40 +1,78 @@
-"use client"
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Favicon from './components/favicon/favicon'
-import Nav from './components/mobile/nav/nav'
-import { useEffect } from 'react'
-import { fixMobileSize } from './lib/helpers/mobile-size-fix'
-import Reseaux from './components/widgets/reseaux'
+import "./globals.css";
+import { Inter } from "next/font/google";
+import Favicon from "./components/favicon/favicon";
+import { Metadata } from "next";
+import AppWrapper from "./components/wrappers/app-wrapper";
 
-const inter = Inter({ subsets: ['latin'] })
+export const metadata: Metadata = {
+  metadataBase: new URL("https://lilousnow.fr"),
+  alternates: {
+    canonical: "/",
+  },
+  title: {
+    template: "%s | LilouSnow",
+    default: "LilouSnow", // a default is required when creating a template
+  },
+  keywords: [
+    "tatouage",
+    "thérapeutique",
+    "cicatrices",
+    "vitiligo",
+    "Mastectomie",
+    "Abdominoplastie",
+  ],
+  authors: [
+    { name: "Christophe Le Goff", url: "https://christophe-le-goff.com" },
+  ],
+  openGraph: {
+    title: "LilouSnow",
+    description: "Tatouages thérapeutiques",
+    url: "https://lilousnow.fr",
+    siteName: "LilouSnow",
+    images: [
+      {
+        url: "img/seo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "fr_FR",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  useEffect(() => {
-    // Mise à niveau taille pour mobile -- vh
-    fixMobileSize()
-  }, [])
   return (
     <html lang="fr">
-       <head>
+      <head>
         <meta charSet="utf-8" />
         <Favicon />
       </head>
-      <body className={inter.className + " select-none"}>
-      <Nav/>  
-        {children}
-        <Reseaux
-        homeIcon
-        slug={["facebook", "messenger", "instagram", "email"]}
-        classname={
-          "md:hidden fixed bottom-0 flex w-full flex-wrap justify-around items-center h-[8vh] bg-blanc opacity-80 z-10"
-        }
-      />
-        </body>
+      <body
+        className={inter.className + " select-none"}
+        suppressHydrationWarning={true}
+      >
+        <AppWrapper>{children}</AppWrapper>
+      </body>
     </html>
-  )
+  );
 }
