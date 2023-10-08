@@ -54,6 +54,7 @@ export interface maintenanceDesktopProps {
 }
 
 export interface reseauxProps {
+  homeIcon: boolean;
   slug: string[];
   link?: string[];
   classname: string;

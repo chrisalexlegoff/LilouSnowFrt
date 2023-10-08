@@ -1,12 +1,12 @@
-// 'use client'
+'use client'
 // pages/users.tsx
 import useAxios from "@/app/lib/helpers/use-axios";
 import { reseauxProps } from "@/app/lib/interfaces/interfaces";
-import { EmailIcon } from "@/app/lib/svg/email";
-import { FacebookIcon } from "@/app/lib/svg/facebook";
-import { MessengerIcon } from "@/app/lib/svg/messenger";
-import { InstagramIcon } from "@/app/lib/svg/instagram";
-import { HomeIndicatorIcon } from "@/app/lib/svg/home-indicator";
+import { EmailIcon } from "@/app/lib/svg/reseaux/email";
+import { FacebookIcon } from "@/app/lib/svg/reseaux/facebook";
+import { MessengerIcon } from "@/app/lib/svg/reseaux/messenger";
+import { InstagramIcon } from "@/app/lib/svg/reseaux/instagram";
+import { HomeIndicatorIcon } from "@/app/lib/svg/reseaux/home-indicator";
 
 interface ReseauxResponse {
   Reseaux: reseauxProps[];
@@ -15,7 +15,7 @@ interface ReseauxResponse {
   limit: number;
 }
 
-const Reseaux =({ slug, classname }: reseauxProps) => {
+const Reseaux =({ slug, classname, homeIcon }: reseauxProps) => {
   //use the useAxios hook and pass the AxiosRequestConfig
   const { response, loading, error, sendData } = useAxios({
     method: "get",
@@ -54,7 +54,7 @@ const Reseaux =({ slug, classname }: reseauxProps) => {
               });
             })
       )}
-      <HomeIndicatorIcon/>
+      {homeIcon && <HomeIndicatorIcon/>}
     </div></>
   );
 };
