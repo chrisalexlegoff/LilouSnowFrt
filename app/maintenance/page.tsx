@@ -1,29 +1,40 @@
-// import MaintenanceComponentDesktop from "../components/desktop/maintenance/maintenance";
+import { Metadata } from "next";
 import MaintenanceComponentDesktop from "../components/desktop/maintenance/maintenance";
 import MaintenanceComponentMobile from "../components/mobile/maintenance/maintenance";
 import { maintenanceProps } from "../lib/interfaces/interfaces";
 
-const Maintenance = ({
-  seo,
-  maintenanceMobile,
-  maintenanceDesktop,
-}: maintenanceProps): JSX.Element => {
+export const metadata: Metadata = {
+  title: "Je reviens vite",
+  description:
+    "Le site lilousnow.fr est actuellement en refonte, nous revenons très vite",
+  alternates: {
+    canonical: "/maintenance",
+  },
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: {
+      index: false,
+      follow: false,
+    },
+  },
+};
+
+const Maintenance = ({}: maintenanceProps): JSX.Element => {
   // const router = useRouter();
   // useEffect(() => {
   //   router.push("/maintenance", "je-reviens-tres-vite");
   // }, []);
+
   return (
-     <> <div className="md:hidden">
-        <MaintenanceComponentMobile
-          seo={seo}
-        />
+    <>
+      <div className="md:hidden">
+        <MaintenanceComponentMobile />
       </div>
       <div className="hidden md:block">
-        <MaintenanceComponentDesktop
-          seo={seo}
-        />
+        <MaintenanceComponentDesktop />
       </div>
-      </> 
+    </>
   );
 };
 

@@ -105,7 +105,8 @@ const MaintenanceComponentDesktop = ({}: maintenanceProps) => {
             <div className="">
               <h3 className="h3-maintenance mb-10">
                 Le site est actuellement en maintenance.
-                <br /> Patience, je serais bientôt de retour !
+                <br />
+                Patience, je serais bientôt de retour !
               </h3>
               <p className="paragraphe-1-maintenance mb-10">
                 En attendant retrouvez moi par mail ou sur les réseaux sociaux :{" "}

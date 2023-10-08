@@ -86,8 +86,9 @@ const MaintenanceComponentMobile = ({}: maintenanceProps) => {
               </h2>
             </div>
             <h3 className="h3-maintenance appear mb-[3vh]">
-              Le site est actuellement en maintenance. Patience, je serais
-              bientôt de retour !
+              Le site est actuellement en maintenance.
+              <br />
+              Patience, je serais bientôt de retour !
             </h3>
             <h4 className="h4-maintenance appear mb-[3vh]">
               Lille - Paris - Lyon - Saint Malo
