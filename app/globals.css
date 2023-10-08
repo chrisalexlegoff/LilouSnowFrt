@@ -91,7 +91,7 @@
   .white h4,
   .white p,
   .white .texte-light,
-  .black .h1-accueil-section-1 h1 {
+  .black h1.h1-accueil-section-1 {
     color: var(--encre-de-chine);
   }
 
@@ -111,7 +111,7 @@
     line-height: 2.313rem;
     letter-spacing: 0.08em;
   }
-  .h1-maintenance > h1 {
+  h1.h1-maintenance {
     font-weight: 700;
     font-size: 1.8rem;
     letter-spacing: 0.08em;
@@ -124,7 +124,7 @@
     line-height: 2.25rem;
     letter-spacing: 0.02em;
   }
-  .h2-accueil-section-1 > h2 {
+  h2.h2-accueil-section-1 {
     font-style: normal;
     font-weight: 400;
     font-size: 1.5rem;
@@ -132,12 +132,12 @@
     letter-spacing: 0.02em;
     color: var(--encre-de-chine);
   }
-  .h2-maintenance > h2 {
+  h2.h2-maintenance {
     font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: 0.08em;
   }
-  .h3-accueil-section-1 > h3 {
+  h3.h3-accueil-section-1 {
     font-style: normal;
     font-weight: 400;
     font-size: 1rem;
@@ -145,7 +145,7 @@
     letter-spacing: 0.02em;
     color: var(--encre-de-chine);
   }
-  .h3-maintenance > h3 {
+  h3.h3-maintenance {
     font-weight: normal;
     font-size: 1.3rem;
     font-family: "Myriad Pro Condensed bold";
@@ -163,7 +163,7 @@
     line-height: 2.125rem;
     letter-spacing: 0.02em;
   }
-  .h4-maintenance > h4 {
+  h4.h4-maintenance {
     font-weight: 400;
     font-size: 1.2rem;
     letter-spacing: 0.02em;
@@ -198,7 +198,7 @@
       font-size: 4.563rem;
       line-height: 4.375rem;
     }
-    .h1-maintenance > h1 {
+    h1.h1-maintenance {
       font-weight: 700;
       font-size: 3.8rem;
       letter-spacing: 0.08em;
@@ -207,7 +207,7 @@
       font-size: 2.875rem;
       line-height: 3.438rem;
     }
-    .h2-maintenance > h2 {
+    h2.h2-maintenance {
       font-weight: 400;
       font-size: 2.5rem;
       letter-spacing: 0.13em;
@@ -216,14 +216,14 @@
       font-size: 2.25rem;
       letter-spacing: 0.02em;
     }
-    .h3-maintenance > h3 {
+    h3.h3-maintenance {
       font-weight: normal;
       font-size: 1.9rem;
       letter-spacing: 0.02em;
       line-height: 1.2em;
       font-family: "Myriad Pro Condensed Bold";
     }
-    .h4-maintenance > h4 {
+    h4.h4-maintenance {
       font-weight: normal;
       font-size: 1.8rem;
       letter-spacing: 0.02em;
@@ -235,14 +235,14 @@
       line-height: 1.75rem;
       letter-spacing: 0.05em;
     }
-    .paragraphe-1-maintenance > p {
+    p.paragraphe-1-maintenance {
       font-style: normal;
       font-weight: 400;
       font-size: 1.3rem;
       line-height: 1.2rem;
       letter-spacing: 0.05em;
     }
-    .titre-reseau > p {
+    p.titre-reseau {
       font-style: normal;
       font-weight: 700;
       font-size: 2rem;

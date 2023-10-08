@@ -24,6 +24,7 @@ const config: Config = {
         "encre-de-chine": "var(--encre-de-chine)",
         dore: "var(--dore)",
         gris: "var(--gris)",
+        "gris-transparent": "rgba(255, 255, 255, 0.8)",
         blanc: "var(--blanc)",
       },
       backgroundImage: {
