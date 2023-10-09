@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
 
-axios.defaults.baseURL = "https://localhost:8000/api";
+axios.defaults.baseURL = `${process.env.NEXT_PUBLIC_API_URL}`;
 //If you are using different URLs, consider removing this line and adding a baseURL in the Axios Config parameter.
 
 const useAxios = (axiosParams: AxiosRequestConfig) => {
