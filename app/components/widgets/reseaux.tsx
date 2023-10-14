@@ -7,15 +7,17 @@ import { FacebookIcon } from "@/app/lib/svg/reseaux/facebook";
 import { MessengerIcon } from "@/app/lib/svg/reseaux/messenger";
 import { InstagramIcon } from "@/app/lib/svg/reseaux/instagram";
 import { HomeIndicatorIcon } from "@/app/lib/svg/reseaux/home-indicator";
+import { Suspense } from "react";
+import Loader from "../loader/loader";
 
-interface ReseauxResponse {
-  Reseaux: reseauxProps[];
-  total: number;
-  skip: number;
-  limit: number;
-}
-
-const Reseaux = ({ slug, classname, homeIcon }: reseauxProps) => {
+const Reseaux = ({
+  slug,
+  classname,
+  homeIcon,
+  colorIcon,
+  widthIcon,
+  heightIcon,
+}: reseauxProps) => {
   //use the useAxios hook and pass the AxiosRequestConfig
   const { response, loading, error, sendData } = useAxios({
     method: "get",
@@ -25,9 +27,9 @@ const Reseaux = ({ slug, classname, homeIcon }: reseauxProps) => {
     },
   });
   return (
-    <>
-      <div className={classname} id="reseaux">
-        {loading && <p>Loading...</p>}
+    <div className={classname} id="reseaux">
+      <div className="flex w-full justify-around items-center">
+        {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
         {error && <p>{error.message}</p>}
         {!loading &&
           !error &&
@@ -41,18 +43,46 @@ const Reseaux = ({ slug, classname, homeIcon }: reseauxProps) => {
                     className="svg-reseaux-mobile z-20"
                     key={val.id}
                   >
-                    {val.slug === "facebook" && <FacebookIcon />}
-                    {val.slug === "email" && <EmailIcon />}
-                    {val.slug === "messenger" && <MessengerIcon />}
-                    {val.slug === "instagram" && <InstagramIcon />}
+                    {val.slug === "facebook" && (
+                      <FacebookIcon
+                        color={colorIcon}
+                        width={widthIcon}
+                        height={heightIcon}
+                      />
+                    )}
+                    {val.slug === "email" && (
+                      <EmailIcon
+                        color={colorIcon}
+                        width={widthIcon}
+                        height={heightIcon}
+                      />
+                    )}
+                    {val.slug === "messenger" && (
+                      <MessengerIcon
+                        color={colorIcon}
+                        width={widthIcon}
+                        height={heightIcon}
+                      />
+                    )}
+                    {val.slug === "instagram" && (
+                      <InstagramIcon
+                        color={colorIcon}
+                        width={widthIcon}
+                        height={heightIcon}
+                      />
+                    )}
                   </a>
                 );
               }
             });
           })}
-        {homeIcon && <HomeIndicatorIcon />}
       </div>
-    </>
+      {homeIcon && (
+        <div className="basis-full bottom-0">
+          <HomeIndicatorIcon />
+        </div>
+      )}
+    </div>
   );
 };
 

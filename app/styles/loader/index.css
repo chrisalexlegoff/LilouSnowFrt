@@ -1,0 +1,12 @@
+@keyframes loadRotate {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+.loader {
+  animation: loadRotate 2s linear infinite;
+}

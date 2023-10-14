@@ -1,6 +1,6 @@
-.svg-reseaux-mobile svg path {
+/* .svg-reseaux-mobile svg path {
   fill: black;
-}
+} */
 
 #reseaux svg:hover path {
   fill: var(--dore);
