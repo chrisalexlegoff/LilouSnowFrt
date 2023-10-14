@@ -116,6 +116,9 @@ const MaintenanceComponentDesktop = ({}: maintenanceProps) => {
               <div className="flex flex-col w-fit min-w-[160px]">
                 <p className="titre-reseau mb-6">Suivez-moi</p>
                 <Reseaux
+                  colorIcon={"#000707"}
+                  widthIcon={"45"}
+                  heightIcon={"39px"}
                   homeIcon={false}
                   slug={["facebook", "instagram"]}
                   classname={"flex w-full justify-around"}
@@ -124,6 +127,9 @@ const MaintenanceComponentDesktop = ({}: maintenanceProps) => {
               <div className="flex flex-col w-fit min-w-[160px]">
                 <p className="titre-reseau mb-6">Contactez-moi</p>
                 <Reseaux
+                  colorIcon={"#000707"}
+                  widthIcon={"45"}
+                  heightIcon={"39px"}
                   homeIcon={false}
                   slug={["email", "messenger"]}
                   classname={"flex w-full justify-around"}

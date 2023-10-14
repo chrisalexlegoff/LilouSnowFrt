@@ -21,11 +21,6 @@ export const metadata: Metadata = {
 };
 
 const Maintenance = ({}: maintenanceProps): JSX.Element => {
-  // const router = useRouter();
-  // useEffect(() => {
-  //   router.push("/maintenance", "je-reviens-tres-vite");
-  // }, []);
-
   return (
     <>
       <div className="md:hidden">

@@ -6,6 +6,7 @@
 @import "./styles/pages/";
 @import "./styles/nav/";
 @import "./styles/reseaux/";
+@import "./styles/loader/";
 
 :root {
   --encre-de-chine: #000707;
@@ -170,7 +171,7 @@
   }
   p {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1rem;
     line-height: 1.438rem;
     letter-spacing: 0.02em;
@@ -180,6 +181,14 @@
     font-weight: 400;
     font-size: 1.438rem;
     line-height: 1.813rem;
+    letter-spacing: 0.02em;
+  }
+
+  .texte-reseau-accueil {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.425rem;
     letter-spacing: 0.02em;
   }
 

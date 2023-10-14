@@ -18,10 +18,13 @@ export default function AppWrapper({
       <Nav />
       {children}
       <Reseaux
+        colorIcon="#000707"
+        widthIcon={"53px"}
+        heightIcon={"45px"}
         homeIcon
         slug={["facebook", "messenger", "instagram", "email"]}
         classname={
-          "md:hidden fixed bottom-0 flex w-full flex-wrap justify-around items-center h-[8vh] bg-blanc opacity-80 z-10"
+          "md:hidden fixed w-full bottom-0 grid grid-rows-1 h-[9vh] bg-blanc opacity-80 z-10"
         }
       />
     </>

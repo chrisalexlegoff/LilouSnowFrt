@@ -23,7 +23,9 @@ export interface homeMobileProps {
   buttonSdeux: string;
 }
 
-export interface accueilProps {}
+export interface accueilProps {
+  logoWhite: boolean;
+}
 
 export interface maintenanceProps {}
 
@@ -36,4 +38,24 @@ export interface reseauxProps {
   slug: string[];
   link?: string[];
   classname: string;
+  colorIcon: string;
+  widthIcon: string;
+  heightIcon: string;
+}
+
+export interface questionsProps {
+  classname: string;
+  nombreElementsAffiches: number;
+  isMobile: boolean;
+}
+
+export interface loaderProps {
+  color: string;
+  width: string;
+  height: string;
+  classname?: string;
+}
+
+export interface flecheProps {
+  color: string;
 }
