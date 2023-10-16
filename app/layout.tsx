@@ -69,7 +69,7 @@ export default function RootLayout({
       </head>
       <body
         className={inter.className + " select-none"}
-        suppressHydrationWarning={false}
+        suppressHydrationWarning={true}
       >
         <AppWrapper>{children}</AppWrapper>
       </body>

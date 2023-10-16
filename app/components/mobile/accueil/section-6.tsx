@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import { accueilProps } from "../../../../lib/interfaces/interfaces";
+import { sectionsProps } from "../../../lib/interfaces/interfaces";
 
-const SectionSix = ({ logoWhite }: accueilProps) => {
+const SectionSix = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-6"

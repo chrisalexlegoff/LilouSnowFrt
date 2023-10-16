@@ -60,7 +60,6 @@ const Nav = (): JSX.Element => {
           <Link className="h-full" href={"/"}>
             <LogoMobileCloseImg />
           </Link>
-
           <button className="cursor-pointer" onClick={() => setOpen(!open)}>
             <HamburgerOpenImg />
           </button>
@@ -83,8 +82,45 @@ const Nav = (): JSX.Element => {
           </button>
         </div>
         <div className="h-full w-4/5 mx-auto pb-32 pt-16 flex flex-col items-center justify-around">
-          <Link className="text-center" href="/">
+          <Link onClick={() => setOpen(!open)} className="text-center" href="/">
             <h3>Accueil</h3>
+          </Link>
+          <Link
+            onClick={() => setOpen(!open)}
+            className="text-center"
+            href="/a-propos"
+          >
+            <h3>A propos</h3>
+          </Link>
+          <Link
+            onClick={() => setOpen(!open)}
+            className="text-center"
+            href="/tatouages-therapeutiques"
+          >
+            <h3>Tatouages thérapeutiques</h3>
+          </Link>
+          <Link
+            onClick={() => setOpen(!open)}
+            className="text-center"
+            href="/mes-collaborateurs"
+          >
+            <h3>Mes collaborateurs</h3>
+          </Link>
+          <Link
+            onClick={() => setOpen(!open)}
+            className="text-center"
+            href="/hommage"
+          >
+            <h3>Hommage</h3>
+          </Link>
+          <Link
+            onClick={() => setOpen(!open)}
+            className="text-center"
+            href="/mentions-legales"
+          >
+            <h3>
+              Mentions légales - <br /> Politique de confidentialité
+            </h3>
           </Link>
         </div>
       </div>

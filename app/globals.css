@@ -7,6 +7,7 @@
 @import "./styles/nav/";
 @import "./styles/reseaux/";
 @import "./styles/loader/";
+@import "./styles/video/";
 
 :root {
   --encre-de-chine: #000707;
@@ -153,7 +154,7 @@
   }
   h3 /* MB */ {
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.688rem;
     line-height: 2.125rem;
   }
@@ -175,6 +176,13 @@
     font-size: 1rem;
     line-height: 1.438rem;
     letter-spacing: 0.02em;
+  }
+  p.s1AP {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.813rem; /* 88.095% */
+    letter-spacing: 0.17em;
   }
   .texte-button {
     font-style: normal;

@@ -1,8 +1,8 @@
 import Link from "next/link";
 import React from "react";
-import { accueilProps } from "@/app/lib/interfaces/interfaces";
+import { sectionsProps } from "@/app/lib/interfaces/interfaces";
 
-const SectionCinq = ({ logoWhite }: accueilProps) => {
+const SectionCinq = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-5"

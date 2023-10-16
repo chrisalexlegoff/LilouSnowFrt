@@ -17,6 +17,7 @@
     "next-sitemap": "^4.2.3",
     "react": "latest",
     "react-dom": "latest",
+    "react-player": "^2.13.0",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
