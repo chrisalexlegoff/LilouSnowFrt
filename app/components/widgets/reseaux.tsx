@@ -7,7 +7,7 @@ import { FacebookIcon } from "@/app/lib/svg/reseaux/facebook";
 import { MessengerIcon } from "@/app/lib/svg/reseaux/messenger";
 import { InstagramIcon } from "@/app/lib/svg/reseaux/instagram";
 import { HomeIndicatorIcon } from "@/app/lib/svg/reseaux/home-indicator";
-import { Suspense } from "react";
+import Link from "next/link";
 import Loader from "../loader/loader";
 
 const Reseaux = ({
@@ -37,10 +37,10 @@ const Reseaux = ({
             return slug.map((valSlug: string) => {
               if (val.slug == valSlug) {
                 return (
-                  <a
+                  <Link
                     target="_blank"
                     href={val.link}
-                    className="svg-reseaux-mobile z-20"
+                    className="svg-reseaux-mobile"
                     key={val.id}
                   >
                     {val.slug === "facebook" && (
@@ -71,7 +71,7 @@ const Reseaux = ({
                         height={heightIcon}
                       />
                     )}
-                  </a>
+                  </Link>
                 );
               }
             });

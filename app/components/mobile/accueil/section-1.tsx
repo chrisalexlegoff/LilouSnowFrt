@@ -2,12 +2,12 @@
 import Link from "next/link";
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import { accueilProps } from "../../../../lib/interfaces/interfaces";
-import { Etoile } from "../../../../lib/svg/Accueil/etoile-mobile";
-import { FondAccueilSectionUneImg } from "../../../../lib/svg/Accueil/fond-section-1-mobile";
-import { Fleche } from "../../../../lib/svg/Accueil/fleche";
+import { sectionsProps } from "../../../lib/interfaces/interfaces";
+import { Etoile } from "../../../lib/svg/Accueil/etoile-mobile";
+import { FondAccueilSectionUneImg } from "../../../lib/svg/Accueil/fond-section-1-mobile";
+import { Fleche } from "../../../lib/svg/Accueil/fleche";
 
-const SectionUne = ({ logoWhite }: accueilProps) => {
+const SectionUne = ({ logoWhite }: sectionsProps) => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       gsap.fromTo(

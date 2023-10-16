@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
-import { accueilProps } from "@/app/lib/interfaces/interfaces";
+import { sectionsProps } from "@/app/lib/interfaces/interfaces";
 import { Fleche } from "@/app/lib/svg/Accueil/fleche";
 import { Questions } from "@/app/components/question/question";
 
-const SectionTrois = ({ logoWhite }: accueilProps) => {
+const SectionTrois = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3"

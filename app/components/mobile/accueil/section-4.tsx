@@ -1,8 +1,9 @@
 import React from "react";
-import { accueilProps } from "@/app/lib/interfaces/interfaces";
+import { sectionsProps } from "@/app/lib/interfaces/interfaces";
 import Reseaux from "@/app/components/widgets/reseaux";
+import Image from "next/image.js";
 
-const SectionQuatre = ({ logoWhite }: accueilProps) => {
+const SectionQuatre = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-4"
@@ -11,10 +12,11 @@ const SectionQuatre = ({ logoWhite }: accueilProps) => {
       }`}
     >
       <div className="min-h-screen max-w-md mx-auto flex flex-col justify-around items-center py-24 text-white w-10/12">
-        <div>
-          <img
-            src="img/mobile/accueil/fond-accueil-mobile-section-4.png"
+        <div className="h-[390px] w-[350px] relative">
+          <Image
+            src="/img/mobile/accueil/fond-accueil-mobile-section-4.png"
             alt="fond accueil section mobile 4"
+            fill
           />
         </div>
         <h2 className="mt-6">Me contacter</h2>

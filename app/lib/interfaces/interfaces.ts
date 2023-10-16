@@ -23,7 +23,7 @@ export interface homeMobileProps {
   buttonSdeux: string;
 }
 
-export interface accueilProps {
+export interface sectionsProps {
   logoWhite: boolean;
 }
 
@@ -58,4 +58,18 @@ export interface loaderProps {
 
 export interface flecheProps {
   color: string;
+}
+
+export interface videoProps {
+  classname: string;
+}
+
+export interface retourProps {
+  color: string;
+  classname: string;
+}
+
+export interface reactPlayerButtonProps {
+  color: string;
+  classname: string;
 }
