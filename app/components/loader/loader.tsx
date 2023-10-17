@@ -5,7 +5,7 @@ import React from "react";
 const Loader = ({ color, width, height, classname }: loaderProps) => {
   return (
     <LoaderImg
-      classname={`${classname} loader`}
+      classname={`${classname} loader mx-auto`}
       color={color}
       width={width}
       height={height}

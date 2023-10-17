@@ -7,7 +7,6 @@
 @import "./styles/nav/";
 @import "./styles/reseaux/";
 @import "./styles/loader/";
-@import "./styles/video/";
 
 :root {
   --encre-de-chine: #000707;
@@ -176,6 +175,13 @@
     font-size: 1rem;
     line-height: 1.438rem;
     letter-spacing: 0.02em;
+  }
+  p.sColP {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.813rem; /* 88.095% */
+    letter-spacing: 0.1em;
   }
   p.s1AP {
     font-size: 1.8rem;

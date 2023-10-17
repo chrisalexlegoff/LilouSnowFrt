@@ -1,9 +1,19 @@
+"use client";
 import Link from "next/link";
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import Video from "../../video/video";
+import useAxios from "@/app/lib/helpers/use-axios";
+import Loader from "../../loader/loader";
 
 const SectionDeux = ({ logoWhite }: sectionsProps) => {
+  const { response, loading, error, sendData } = useAxios({
+    method: "get",
+    url: "/presentations",
+    headers: {
+      accept: "application/ld+json",
+    },
+  });
   return (
     <section
       id="section-2"
@@ -38,7 +48,14 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           </Link>
         </div>
         <div className="relative mb-24">
-          <Video classname={""} />
+          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+          {error && <p>{error.message}</p>}
+          {!loading && !error && (
+            <Video
+              videoName={response?.data["hydra:member"][0].presentationName}
+              classname={"w-full mt-10"}
+            />
+          )}
         </div>
       </div>
     </section>

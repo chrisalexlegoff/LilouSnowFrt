@@ -60,8 +60,14 @@ export interface flecheProps {
   color: string;
 }
 
+export interface hexogoneProps {
+  colorFond: string;
+  colorPath: string;
+}
+
 export interface videoProps {
   classname: string;
+  videoName: string;
 }
 
 export interface retourProps {

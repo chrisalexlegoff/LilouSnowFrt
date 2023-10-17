@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { fixMobileSize } from "@/app/lib/helpers/mobile-size-fix";
 import Nav from "../mobile/nav/nav";
 import Reseaux from "../widgets/reseaux";
+import { Footer } from "../footer/mobile/footer";
 
 export default function AppWrapper({
   children,
@@ -17,6 +18,7 @@ export default function AppWrapper({
     <>
       <Nav />
       {children}
+      <Footer />
       <Reseaux
         colorIcon="#000707"
         widthIcon={"53px"}
