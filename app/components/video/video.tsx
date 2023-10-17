@@ -4,7 +4,7 @@ import { ReactPlayerIcon } from "@/app/lib/svg/divers/react-player-icon";
 import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
-const Video = ({ classname }: videoProps) => {
+const Video = ({ classname, videoName }: videoProps) => {
   const playerRef = useRef<ReactPlayer>(null);
   const [play, setPlay] = useState<boolean>(false);
   useEffect(() => {
@@ -23,7 +23,8 @@ const Video = ({ classname }: videoProps) => {
             alt="Thumbnail"
           />
         }
-        url="https://localhost:8000/videos/video-1657379124-652c1345a291d217834365.mp4"
+        // url="https://localhost:8000/videos/video-1657379124-652c1345a291d217834365.mp4"
+        url={`${process.env.NEXT_PUBLIC_VIDEOS_URL}/${videoName}`}
         controls
         config={{ file: { attributes: { controlsList: "nodownload" } } }}
         pip={false}

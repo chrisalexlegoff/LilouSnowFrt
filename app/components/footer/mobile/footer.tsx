@@ -1,12 +1,15 @@
+"use client";
 import Link from "next/link.js";
 import React from "react";
 import Image from "next/image";
 import Reseaux from "../../widgets/reseaux";
+import { usePathname } from "next/navigation.js";
 
 export const Footer = () => {
   const CurrentDateYear = new Date().getFullYear();
-  return (
-    <footer className="bg-encre-de-chine md-hidden mx-auto pt-6">
+  const pathname = usePathname();
+  return pathname != "/maintenance" ? (
+    <footer className="bg-encre-de-chine md:hidden mx-auto pt-6">
       <div className="h-[212px] w-[212px] relative mx-auto">
         <Image
           src="/img/mobile/accueil/accueil-mobile-section-7.png"
@@ -63,5 +66,7 @@ export const Footer = () => {
         </div>
       </div>
     </footer>
+  ) : (
+    <></>
   );
 };

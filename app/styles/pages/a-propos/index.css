@@ -1,0 +1,7 @@
+#a-propos #section-3 .p-with-title > span {
+  text-align: left;
+  display: block;
+  color: var(--dore);
+  font-size: 1.6rem;
+  margin-bottom: 1.8rem;
+}
