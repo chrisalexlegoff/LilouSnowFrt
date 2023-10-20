@@ -272,5 +272,12 @@
       line-height: 1.425rem;
       letter-spacing: 0.02em;
     }
+    span {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.3rem; /* 143.75% */
+      letter-spacing: 0.02em;
+    }
   }
 }

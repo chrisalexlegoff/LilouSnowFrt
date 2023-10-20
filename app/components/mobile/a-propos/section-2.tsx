@@ -48,7 +48,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           </Link>
         </div>
         <div className="relative mb-24">
-          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+          {/* {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />} */}
           {error && <p>{error.message}</p>}
           {!loading && !error && (
             <Video

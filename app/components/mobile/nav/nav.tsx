@@ -48,7 +48,7 @@ const Nav = (): JSX.Element => {
           });
         });
       }
-    }, 1000);
+    }, 2000);
   }, []);
   return pathname != "/maintenance" ? (
     <>

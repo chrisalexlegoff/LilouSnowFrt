@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import useAxios from "@/app/lib/helpers/use-axios";
-import { Hexagone } from "@/app/lib/svg/divers/hexagone.old";
+import { Hexagone } from "@/app/lib/svg/divers/hexagone";
 import Loader from "../../loader/loader";
 
 const SectionDeux = ({ logoWhite }: sectionsProps) => {
@@ -14,10 +14,9 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
-  console.log(response);
   return (
     <>
-      {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+      {/* {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />} */}
       {error && <p>{error.message}</p>}
       {!loading &&
         !error &&
@@ -26,6 +25,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           .map((section: any, index: number) => {
             return (
               <section
+                key={index}
                 id={`section-${index + 2}`}
                 className={`min-h-screen w-screen ${
                   index % 2 == 0 ? "black bg-encre-de-chine" : "white bg-blanc"
