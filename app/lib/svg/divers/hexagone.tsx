@@ -3,7 +3,7 @@ import { hexogoneProps } from "../../interfaces/interfaces.js";
 export const Hexagone = ({ colorFond, colorPath }: hexogoneProps) => {
   return (
     <svg
-      className="-m-1"
+      className="-m-6"
       width="215"
       height="215"
       viewBox="0 0 215 215"

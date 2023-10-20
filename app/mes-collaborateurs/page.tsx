@@ -1,3 +1,4 @@
+// "use client";
 import React from "react";
 import SectionUne from "../components/mobile/mes-collaborateurs/section-1";
 import SectionDeux from "../components/mobile/mes-collaborateurs/section-2";

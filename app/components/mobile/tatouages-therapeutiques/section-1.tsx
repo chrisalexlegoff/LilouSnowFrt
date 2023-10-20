@@ -10,9 +10,9 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[45vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[50vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
-            backgroundImage: `url('img/mobile/a-propos/fond-haut.png')`,
+            backgroundImage: `url('img/mobile/realisations/fond-entete-realisations-mobile.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -20,9 +20,21 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
         >
           <div className="max-w-md grow flex flex-col">
             <div>
-              <p className="s1AP mb-2">Présentation</p>
+              <p className="s1AP mb-2">
+                Mes
+                <br />
+                Mes réalisations
+              </p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
+            {/* <div className="grow flex w-full items-center">
+              <GoBackButton
+                classname={
+                  "flex items-center fixed left-4 top-[40vh] mix-blend-exclusion"
+                }
+                color={"#FFFFFF"}
+              />
+            </div> */}
           </div>
         </div>
       </div>

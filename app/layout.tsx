@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import Favicon from "./components/favicon/favicon";
 import { Metadata } from "next";
 import AppWrapper from "./components/wrappers/app-wrapper";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lilousnow.fr"),
@@ -71,7 +73,9 @@ export default function RootLayout({
         className={inter.className + " select-none"}
         suppressHydrationWarning={true}
       >
-        <AppWrapper>{children}</AppWrapper>
+        <Suspense fallback={<Loading />}>
+          <AppWrapper>{children}</AppWrapper>
+        </Suspense>
       </body>
     </html>
   );
