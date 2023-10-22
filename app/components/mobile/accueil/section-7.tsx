@@ -1,8 +1,5 @@
 import React from "react";
 import { sectionsProps } from "@/app/lib/interfaces/interfaces";
-import Reseaux from "@/app/components/widgets/reseaux";
-import Link from "next/link";
-import Image from "next/image.js";
 
 const SectionSept = ({ logoWhite }: sectionsProps) => {
   return (

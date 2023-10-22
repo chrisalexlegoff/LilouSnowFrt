@@ -26,7 +26,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
         <div
           className="mx-auto my-10 h-[350px] w-full relative"
           style={{
-            backgroundImage: `url('img/mobile/a-propos/fond-bas.png')`,
+            backgroundImage: `url('/img/mobile/a-propos/fond-bas.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -48,7 +48,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           </Link>
         </div>
         <div className="relative mb-24">
-          {/* {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />} */}
+          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
           {error && <p>{error.message}</p>}
           {!loading && !error && (
             <Video

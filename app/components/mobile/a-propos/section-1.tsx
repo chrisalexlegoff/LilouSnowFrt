@@ -1,6 +1,5 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
-import { GoBackButton } from "../../go-back/go-back-button";
 
 const SectionUne = ({ logoWhite }: sectionsProps) => {
   return (
@@ -10,9 +9,9 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[45vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
-            backgroundImage: `url('img/mobile/a-propos/fond-haut.png')`,
+            backgroundImage: `url('/img/mobile/a-propos/fond-haut.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",

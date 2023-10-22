@@ -16,7 +16,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
   });
   return (
     <>
-      {/* {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />} */}
+      {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
       {error && <p>{error.message}</p>}
       {!loading &&
         !error &&

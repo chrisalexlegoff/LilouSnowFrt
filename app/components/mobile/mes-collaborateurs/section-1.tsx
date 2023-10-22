@@ -10,9 +10,9 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[306px] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
-            backgroundImage: `url('img/mobile/a-propos/fond-haut.png')`,
+            backgroundImage: `url('/img/mobile/a-propos/fond-haut.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -26,12 +26,6 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
                 Collaborateurs
               </p>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div className="grow flex w-full items-center">
-              <GoBackButton
-                classname={"flex justify-between items-center w-16 h-6"}
-                color={"#FFFFFF"}
-              />
             </div>
           </div>
         </div>

@@ -15,6 +15,7 @@ export const Footer = () => {
           src="/img/mobile/accueil/accueil-mobile-section-7.png"
           alt="fond accueil section mobile 7"
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
       <div className="flex w-full justify-around mb-16 text-center">
@@ -42,7 +43,11 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col text-center !text-blanc pb-10">
-        <Link href={"/mentions-legales"} className="w-fit mx-auto">
+        <Link
+          href={"/mentions-legales"}
+          scroll={false}
+          className="w-fit mx-auto"
+        >
           Mentions légales
           <br />
           Politique de confidentialité

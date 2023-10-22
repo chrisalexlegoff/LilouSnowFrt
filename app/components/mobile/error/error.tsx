@@ -13,7 +13,7 @@ const Error = ({ logoWhite }: sectionsProps) => {
         <div
           className="text-center min-h-screen w-full flex flex-col items-center justify-between pt-32 pb-20"
           style={{
-            backgroundImage: `url('img/mobile/error.png')`,
+            backgroundImage: `url('/img/mobile/error.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -26,7 +26,7 @@ const Error = ({ logoWhite }: sectionsProps) => {
             </div>
           </div>
           <div className="w-full">
-            <Link href="/" passHref>
+            <Link href="/" scroll={false} passHref>
               <button className="mb-12 group mx-auto roup w-3/4 hover:bg-blanc h-20 block border-2 border-blanc text-blanc">
                 <span className="texte-button group-hover:text-encre-de-chine">
                   Retour à l'accueil

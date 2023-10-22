@@ -38,7 +38,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     <section
       id="section-1"
       style={{
-        backgroundImage: `url('img/mobile/accueil/fond-accueil-mobile-section-1-bis.png')`,
+        backgroundImage: `url('/img/mobile/accueil/fond-accueil-mobile-section-1-bis.png')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",

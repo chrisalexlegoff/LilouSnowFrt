@@ -7,7 +7,7 @@ const SectionSix = ({ logoWhite }: sectionsProps) => {
     <section
       id="section-6"
       style={{
-        backgroundImage: `url('img/mobile/accueil/fond-accueil-mobile-section-6.png')`,
+        backgroundImage: `url('/img/mobile/accueil/fond-accueil-mobile-section-6.png')`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
@@ -17,7 +17,7 @@ const SectionSix = ({ logoWhite }: sectionsProps) => {
       <div
         className="min-h-[91vh] w-full max-w-md mx-auto flex flex-col justify-around"
         style={{
-          backgroundImage: `url('img/mobile/accueil/fond-accueil-mobile-section-6-bis.png')`,
+          backgroundImage: `url('/img/mobile/accueil/fond-accueil-mobile-section-6-bis.png')`,
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
           backgroundSize: "contain",

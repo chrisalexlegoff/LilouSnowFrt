@@ -18,7 +18,7 @@ const MaintenanceComponentMobile = ({}: maintenanceProps) => {
         hidden.style.visibility = "hidden";
       });
     }
-  }, []);
+  });
   useEffect(() => {
     if (typeof window !== "undefined") {
       const appears = gsap.utils.toArray<HTMLElement>(".appear");
@@ -43,7 +43,7 @@ const MaintenanceComponentMobile = ({}: maintenanceProps) => {
         }
       );
     }
-  }, []);
+  });
   const fondToString = encodeURIComponent(
     ReactDOMServer.renderToStaticMarkup(<FondMobileMaintenanceImg />)
   );

@@ -24,7 +24,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
         <div
           className="mx-auto my-10 h-[700px] w-full relative"
           style={{
-            backgroundImage: `url('img/mobile/a-propos/fond-bas-section-3.png')`,
+            backgroundImage: `url('/img/mobile/a-propos/fond-bas-section-3.png')`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
@@ -38,7 +38,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
           pellentesque donec hendrerit mi justo.
         </p>
         <div className="w-full">
-          <Link href="/mes-realisations" passHref>
+          <Link href="/mes-realisations" scroll={false} passHref>
             <button className="my-12 group mx-auto roup w-3/4 hover:bg-white h-20 block border-2 border-blanc text-blanc">
               <span className="texte-button group-hover:text-encre-de-chine">
                 Voir mes réalistations
