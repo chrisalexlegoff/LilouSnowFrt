@@ -23,7 +23,7 @@ export default function AppWrapper({
       {pathname != "/maintenance" && pathname != "/" && (
         <div className="relative grow flex w-full items-center md:hidden z-50">
           <GoBackButton
-            classname={"flex items-center fixed left-8 top-[35vh]"}
+            classname={"flex items-center fixed left-8 top-[13vh]"}
             color={"#FFFFFF"}
           />
         </div>

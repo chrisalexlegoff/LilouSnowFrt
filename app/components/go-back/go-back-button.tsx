@@ -8,6 +8,7 @@ import { retourProps } from "@/app/lib/interfaces/interfaces.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export const GoBackButton = ({ color, classname }: retourProps) => {
+  const router = useRouter();
   useEffect(() => {
     setTimeout(() => {
       if (typeof window !== "undefined") {
@@ -34,14 +35,17 @@ export const GoBackButton = ({ color, classname }: retourProps) => {
           });
         });
       }
-    }, 2500);
-  }, []);
-  const router = useRouter();
+    }, 2000);
+  });
+
   return (
     <div
       id="go-back-button"
       className={`${classname} cursor-pointer`}
-      onClick={() => router.back()}
+      onClick={() => {
+        router.back();
+        // router.refresh();
+      }}
     >
       <FlecheRetourUrl color={color} />
       <span className="text-blanc ml-1">Retour</span>

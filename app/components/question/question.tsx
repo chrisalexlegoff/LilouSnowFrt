@@ -18,14 +18,14 @@ export const Questions = ({
   });
   return (
     <div className={classname} id="questions">
-      {/* {loading && (
+      {loading && (
         <Loader
           classname={"mt-10"}
           color={"#000707"}
           width={"106"}
           height={"90px"}
         />
-      )} */}
+      )}
       {error && <p>{error.message}</p>}
       {!loading &&
         !error &&

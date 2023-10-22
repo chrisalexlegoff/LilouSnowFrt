@@ -214,6 +214,22 @@
     letter-spacing: 0.02em;
   }
 
+  p.filtre {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.8rem;
+    letter-spacing: 0.05em;
+  }
+
+  select {
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.8rem; /* 136.842% */
+    letter-spacing: 0.38px;
+  }
+
   /* MEDIA QUERIES!! */
   /* min 768px == md */
   @media only screen and (min-width: 768px) {
