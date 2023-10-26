@@ -4,9 +4,9 @@
 
 @import "./styles/reset.css";
 @import "./styles/pages/";
-@import "./styles/nav/";
 @import "./styles/reseaux/";
 @import "./styles/loader/";
+@import "./styles/avant-apres/";
 
 :root {
   --encre-de-chine: #000707;
@@ -91,6 +91,7 @@
   .white h3,
   .white h4,
   .white p,
+  .white span,
   .white .texte-light,
   .black h1.h1-accueil-section-1 {
     color: var(--encre-de-chine);
@@ -101,6 +102,7 @@
   .black h3,
   .black h4,
   .black p,
+  .black span,
   .black .texte-light {
     color: var(--blanc);
   }
@@ -190,6 +192,13 @@
     line-height: 1.813rem; /* 88.095% */
     letter-spacing: 0.17em;
   }
+  p.s3Tt {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.6rem; /* 88.095% */
+    letter-spacing: 0.07em;
+  }
   .texte-button {
     font-style: normal;
     font-weight: 400;
@@ -212,6 +221,13 @@
     font-size: 1.313rem;
     line-height: 1.813rem;
     letter-spacing: 0.02em;
+  }
+
+  #before-after span {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.813rem;
   }
 
   p.filtre {
