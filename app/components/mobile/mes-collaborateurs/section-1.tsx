@@ -1,6 +1,5 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
-import { GoBackButton } from "../../go-back/go-back-button";
 
 const SectionUne = ({ logoWhite }: sectionsProps) => {
   return (

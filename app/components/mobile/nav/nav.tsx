@@ -1,60 +1,20 @@
 import Link from "next/link.js";
-import { useEffect, useState } from "react";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import gsap from "gsap";
+import { useState } from "react";
 import { usePathname } from "next/navigation.js";
 import { HamburgerCloseImg } from "@/app/lib/svg/nav/hamburger-close";
 import { HamburgerOpenImg } from "@/app/lib/svg/nav/hamburger-open";
 import { LogoMobileCloseImg } from "@/app/lib/svg/nav/logo-mobile-close";
 import { LogoMobileOpenImg } from "@/app/lib/svg/nav/logo-mobile-open";
-gsap.registerPlugin(ScrollTrigger);
 
 const Nav = (): JSX.Element => {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (typeof window !== "undefined") {
-        const sectionsEnCours = gsap.utils.toArray<HTMLElement>("section");
-        const sections = sectionsEnCours.slice(1);
-        const nav: any = document.querySelector("#main-nav-mobile .nav");
-
-        sections.forEach((section) => {
-          gsap.to(section, {
-            scrollTrigger: {
-              // markers: true,
-              start: `top-=${nav != null ? nav?.offsetHeight : 40}`,
-              // start: "top-=40",
-              end: "bottom",
-              trigger: section,
-              onEnter: () => section.scrollIntoView({ behavior: "smooth" }),
-            },
-          });
-        });
-        const sectionsWhite = gsap.utils.toArray<HTMLElement>(".white");
-
-        sectionsWhite.forEach((section) => {
-          gsap.to(section, {
-            scrollTrigger: {
-              start: `top-=${nav != null ? nav?.offsetHeight : 40}`,
-              end: "bottom",
-              trigger: section,
-              toggleClass: {
-                targets: nav,
-                className: "logo-white",
-              },
-            },
-          });
-        });
-      }
-    }, 2000);
-  });
   return pathname != "/maintenance" ? (
     <>
       <div
         id="main-nav-mobile"
-        className="md:hidden nav fixed bg-transparent w-screen p-[30px] z-20"
+        className="md:hidden nav fixed bg-transparent w-screen p-[30px] z-20 mix-blend-exclusion"
       >
         <div className="nav justify-between w-full mx-auto flex flex-row">
           <Link className="h-full" href={"/"} scroll={false}>

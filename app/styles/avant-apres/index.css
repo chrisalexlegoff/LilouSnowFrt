@@ -1,0 +1,19 @@
+#before-after .AB-invisible {
+  display: none;
+}
+#before-after .AB-invisible div {
+  transition: all 0.5s ease;
+}
+
+#before-after .visible .AB-invisible {
+  display: block;
+  background: var(--encre-de-chine);
+}
+
+#before-after .visible .AB-invisible .txt {
+  color: var(--blanc);
+}
+
+#before-after .visible .AB-visible {
+  display: none;
+}

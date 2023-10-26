@@ -31,7 +31,8 @@ const Video = ({ classname, videoName }: videoProps) => {
         ref={playerRef}
         playing
         // onPlay={() => setPlay(!play)}
-        onPause={() => setPlay(!play)}
+        // onPause={() => setPlay(!play)}
+        onEnded={() => setPlay(!play)}
         width={"100%"}
         height={"100%"}
         playIcon={<ReactPlayerIcon color={"#FFFFFF"} classname={"absolute"} />}
