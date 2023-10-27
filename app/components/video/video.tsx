@@ -23,15 +23,12 @@ const Video = ({ classname, videoName }: videoProps) => {
             alt="Thumbnail"
           />
         }
-        // url="https://localhost:8000/videos/video-1657379124-652c1345a291d217834365.mp4"
         url={`${process.env.NEXT_PUBLIC_VIDEOS_URL}/${videoName}`}
         controls
         config={{ file: { attributes: { controlsList: "nodownload" } } }}
         pip={false}
         ref={playerRef}
         playing
-        // onPlay={() => setPlay(!play)}
-        // onPause={() => setPlay(!play)}
         onEnded={() => setPlay(!play)}
         width={"100%"}
         height={"100%"}

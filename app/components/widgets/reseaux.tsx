@@ -1,5 +1,4 @@
 "use client";
-// pages/users.tsx
 import useAxios from "@/app/lib/helpers/use-axios";
 import { reseauxProps } from "@/app/lib/interfaces/interfaces";
 import { EmailIcon } from "@/app/lib/svg/reseaux/email";

@@ -17,3 +17,14 @@
 #before-after .visible .AB-visible {
   display: none;
 }
+
+#before-after .visible .slider,
+#before-after .visible .slider-text,
+#before-after .slider-text-alt {
+  display: none;
+}
+
+#before-after .slider,
+#before-after .visible .slider-text-alt {
+  display: block;
+}

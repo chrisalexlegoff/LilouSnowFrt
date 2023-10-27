@@ -1,4 +1,3 @@
-// "use client";
 import React from "react";
 import SectionUne from "../components/mobile/tatouages-therapeutiques/section-1";
 import SectionDeux from "../components/mobile/tatouages-therapeutiques/section-2";
