@@ -13,7 +13,6 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
-  console.log(response);
   return (
     <section
       id="section-3"

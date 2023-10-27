@@ -79,3 +79,7 @@ export interface reactPlayerButtonProps {
   color: string;
   classname: string;
 }
+export interface sliderProps {
+  imageSrcBefore: string;
+  imageSrcAfter: string;
+}

@@ -185,6 +185,13 @@
     line-height: 1.813rem; /* 88.095% */
     letter-spacing: 0.1em;
   }
+  p.slider-text {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.813rem; /* 88.095% */
+    letter-spacing: 0.02em;
+  }
   p.s1AP {
     font-size: 1.8rem;
     font-style: normal;

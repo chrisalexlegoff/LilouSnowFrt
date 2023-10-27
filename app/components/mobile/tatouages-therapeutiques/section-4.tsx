@@ -1,11 +1,15 @@
 "use client";
-import gsap from "gsap";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import useAxios from "@/app/lib/helpers/use-axios";
 import Loader from "../../loader/loader";
+import { Slider } from "../../before-after/beforeAfter";
 
 const SectionQuatre = ({ logoWhite }: sectionsProps) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const handleClick = (key: number) => {
+    ref.current?.children[key].classList.toggle("visible");
+  };
   const { response, loading, error, sendData } = useAxios({
     method: "get",
     url: "/avant_apres",
@@ -13,34 +17,6 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     // const bgDivs = document.querySelectorAll<HTMLElement>(".AB-visible");
-
-  //     bgDivs.forEach((bgDiv, index) => {
-  //       bgDiv.style.transition = "backgound 2s";
-  //       console.log(bgDiv);
-  //       bgDiv.addEventListener("mouseenter", () => {
-  //         // console.log(
-  //         //   `${process.env.NEXT_PUBLIC_IMAGES_URL}/${response?.data["hydra:member"][index].apresName}`
-  //         // );
-  //         bgDiv.style.backgroundImage = `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${response?.data["hydra:member"][index].apresName})`;
-  //       });
-  //       bgDiv.addEventListener("mouseleave", () => {
-  //         // console.log(
-  //         //   `${process.env.NEXT_PUBLIC_IMAGES_URL}/${response?.data["hydra:member"][index].apresName}`
-  //         // );
-  //         bgDiv.style.backgroundImage = `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${response?.data["hydra:member"][index].avantName})`;
-  //       });
-  //     });
-  //   }
-  // });
-  const ref = useRef<HTMLDivElement>(null);
-  const handleClick = (key: number) => {
-    ref.current?.children[key].classList.toggle("visible");
-    console.log(ref.current);
-  };
-  console.log(response);
   return (
     <section
       id="section-4"
@@ -57,41 +33,29 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
             response?.data["hydra:member"].map((el: any, index: number) => {
               return (
                 <div
-                  onClick={() => handleClick(index)}
                   key={index}
-                  className="group transition-all my-10 w-full mx-auto flex flex-col px-6 cursor-pointer"
+                  className="my-10 w-full mx-auto flex flex-col cursor-pointer"
                 >
-                  <div className="relative overflow-hidden">
-                    <div className="relative flex transition-all left-0">
-                      <div
-                        className="shrink w-full min-h-72 block grayscale relative"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                      >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Avant
-                        </span>
-                      </div>
-                      <div
-                        className="shrink w-full min-h-72 hidden group-hover:block grayscale-[75%]"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                      >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Après
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="AB-invisible px-6 mt-12">
+                  <Slider
+                    imageSrcBefore={`${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName}`}
+                    imageSrcAfter={`${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName}`}
+                  />
+                  <p
+                    className="slider-text text-center"
+                    onClick={() => handleClick(index)}
+                  >
+                    Voir plus de détails ...
+                  </p>
+                  <p
+                    className="slider-text-alt text-center"
+                    onClick={() => handleClick(index)}
+                  >
+                    Fermer ...
+                  </p>
+                  <div
+                    className="AB-invisible px-6 mt-12"
+                    onClick={() => handleClick(index)}
+                  >
                     <div
                       className="min-h-72 grayscale -translate-y-12"
                       style={{
@@ -101,7 +65,6 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
                         backgroundSize: "cover",
                       }}
                     >
-                      {" "}
                       <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
                         Avant
                       </span>
@@ -118,7 +81,6 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
                         backgroundSize: "cover",
                       }}
                     >
-                      {" "}
                       <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
                         Après
                       </span>
