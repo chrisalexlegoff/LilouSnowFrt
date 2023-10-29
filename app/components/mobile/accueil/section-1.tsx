@@ -53,7 +53,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
               <Etoile color={"#000707"} width={"72px"} height={"63px"} />
             </div>
             <h1 className="h1-accueil-section-1 mt-3 mb-1">
-              Tatouage thérapeutique
+              Tatouage Thérapeutique
             </h1>
             <h2 className="h2-accueil-section-1">
               Covering cicatrices et brûlures
