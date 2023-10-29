@@ -1,11 +1,11 @@
 "use client";
 import React from "react";
-import { sectionsProps } from "../../../lib/interfaces/interfaces";
-import Video from "../../video/video";
+import { sectionsProps } from "../../../../lib/interfaces/interfaces";
+import Video from "../../../video/video";
 import useAxios from "@/app/lib/helpers/use-axios";
-import Loader from "../../loader/loader";
+import Loader from "../../../loader/loader";
 
-const SectionTrois = ({ logoWhite }: sectionsProps) => {
+const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
   const { response, loading, error, sendData } = useAxios({
     method: "get",
     url: "/temoignages",
@@ -16,9 +16,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`min-h-screen w-screen bg-blanc ${
-        logoWhite ? "white" : "black"
-      }`}
+      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md mx-auto flex flex-col justify-around items-center pb-12">
         <h2>Témoignages</h2>
@@ -28,7 +26,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
           {!loading &&
             !error &&
             response?.data["hydra:member"]
-              .slice(0, 4)
+              .filter((el: any) => el.categorie === category?.toLowerCase())
               .map((video: any, index: number) => {
                 return (
                   <div key={index} className="my-10">

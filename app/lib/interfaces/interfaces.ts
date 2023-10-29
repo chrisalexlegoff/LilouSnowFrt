@@ -25,6 +25,7 @@ export interface homeMobileProps {
 
 export interface sectionsProps {
   logoWhite: boolean;
+  category?: string;
 }
 
 export interface maintenanceProps {}
