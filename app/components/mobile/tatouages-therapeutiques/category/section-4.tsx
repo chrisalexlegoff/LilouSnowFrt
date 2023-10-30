@@ -71,22 +71,38 @@ const SectionQuatre = ({ logoWhite, category }: sectionsProps) => {
                     ce soit : il n’y a aucune obligation de continuer les soins.
                   </p>
                 </div>
-                <div className="text-center w-3/4 flex flex-col items-center justify-center mx-auto py-24">
+                <div className="text-center w-3/5 flex flex-col items-center justify-center mx-auto pt-24 pb-36">
                   <FondTarifImg />
-                  <div className="text z-10 h-[300px] flex flex-col justify-center">
-                    <p className="pt-6 text-center !text-encre-de-chine">
+                  <div className="text z-10 flex flex-col justify-center">
+                    <p className="text-center !text-encre-de-chine">
                       {tarif.categorie.charAt(0).toUpperCase()}
                       {category?.slice(1)}
                     </p>
                     {tarif?.alternateName && (
                       <p className="!text-encre-de-chine">{`(ou ${tarif.alternateName})`}</p>
                     )}
-                    <h2 className="h2-accueil-section-1">
-                      Covering cicatrices et brûlures
-                    </h2>
-                    <h3 className="h3-accueil-section-1 mt-3">
-                      Lille - Paris Lyon - Saint Malo
-                    </h3>
+                    <p className="pt-4 text-center !text-[#0EA7C9]">
+                      {`${tarif.tarifBase} \u20ac la séance`}
+                    </p>
+                    <div className="pt-4">
+                      <p className="text-justify !text-encre-de-chine">{`Journée complète de ${tarif.horaireDebut}h à ${tarif.horaireFin}h.`}</p>
+                      <p className="text-left !text-encre-de-chine">
+                        Comprend :{" "}
+                      </p>
+                      {Object.values(tarif.contenuSeance)
+                        .slice(0, 5)
+                        .map((element: any, index: number) => {
+                          return (
+                            <p
+                              key={index}
+                              className="text-left !text-encre-de-chine"
+                            >
+                              {`+ ${element}`}
+                            </p>
+                          );
+                        })}
+                    </div>
+                    <p className="pt-4 text-justify !text-encre-de-chine">{`Chaque séance supplémentaire est à ${tarif.tarifSup}\u20ac tout compris. (${tarif.horaireDebut}h-${tarif.horaireFin}h).`}</p>
                   </div>
                 </div>
               </div>

@@ -19,7 +19,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
         >
           <div className="max-w-md grow flex flex-col">
             <div>
-              <p className="s1AP mb-2">Présentation</p>
+              <h1 className="s1AP mb-2">Présentation</h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
