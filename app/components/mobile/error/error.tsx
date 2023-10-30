@@ -21,7 +21,7 @@ const Error = ({ logoWhite }: sectionsProps) => {
         >
           <div className="max-w-md grow flex flex-col">
             <div>
-              <p className="s1AP mb-2">Page introuvable !</p>
+              <h1 className="s1AP mb-2">Page introuvable !</h1>
               <p>Ce n’est pas grave, voici de quoi retrouver votre chemin : </p>
             </div>
           </div>

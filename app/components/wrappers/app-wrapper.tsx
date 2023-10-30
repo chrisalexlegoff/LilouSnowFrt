@@ -6,6 +6,7 @@ import Reseaux from "../widgets/reseaux";
 import { Footer } from "../mobile/footer/footer";
 import { GoBackButton } from "../go-back/go-back-button";
 import { usePathname } from "next/navigation.js";
+import CookieConsent from "react-cookie-consent";
 
 export default function AppWrapper({
   children,
@@ -30,6 +31,19 @@ export default function AppWrapper({
       )}
       {children}
       <Footer />
+      <CookieConsent
+        buttonText="Je comprends"
+        style={{ background: "#000707", alignItems: "center" }}
+        buttonStyle={{
+          background: "#FFFFFF",
+          color: "#000707",
+          fontSize: "13px",
+        }}
+      >
+        Ce site pourrait utiliser un ou deux cookies de suivi pour améliorer
+        votre expérience utilisateur.
+        <br /> Aucune information vous concernant n'est enregistrée!
+      </CookieConsent>
       <Reseaux
         colorIcon="#000707"
         widthIcon={"53px"}

@@ -75,6 +75,10 @@
     margin: auto;
   }
 
+  #mentions-legales a {
+    color: #0ea7c9;
+  }
+
   /* FONT MAINTENANCE */
   /* .h2-maintenance > h2,
   .h3-maintenance > h3,
@@ -119,6 +123,13 @@
     font-size: 1.8rem;
     letter-spacing: 0.08em;
     color: var(--encre-de-chine);
+  }
+  h1.s1AP {
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.813rem; /* 88.095% */
+    letter-spacing: 0.17em;
   }
   h2 {
     font-style: normal;
@@ -192,13 +203,7 @@
     line-height: 1.813rem; /* 88.095% */
     letter-spacing: 0.02em;
   }
-  p.s1AP {
-    font-size: 1.8rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.813rem; /* 88.095% */
-    letter-spacing: 0.17em;
-  }
+
   p.s3Tt {
     font-size: 1.6rem;
     font-style: normal;
