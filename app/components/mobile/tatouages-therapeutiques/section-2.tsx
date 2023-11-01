@@ -2,21 +2,14 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import { useRouter } from "next/navigation.js";
+import { categoryTab } from "@/app/lib/helpers/categories";
 
 const SectionDeux = ({ logoWhite }: sectionsProps) => {
   const router = useRouter();
   function handleChange(e: any) {
     router.push(e.target.value, { scroll: false });
   }
-  const categoryTab = [
-    "Voir tout",
-    "Mastectomie",
-    "Abdominoplastie",
-    "Cicatrices",
-    "Vitiligo",
-    "Grands brûlés",
-    "Tricopigmentation",
-  ];
+
   return (
     <section
       id="section-2"
@@ -42,9 +35,9 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
               return (
                 <option
                   key={index}
-                  value={`/tatouages-therapeutiques/${val.toLowerCase()}`}
+                  value={`/tatouages-therapeutiques${val.link}`}
                 >
-                  {val}
+                  {val.slug}
                 </option>
               );
             })}

@@ -35,7 +35,7 @@ export interface maintenanceMobileProps {}
 export interface maintenanceDesktopProps {}
 
 export interface reseauxProps {
-  homeIcon: boolean;
+  homeIcon?: boolean;
   slug: string[];
   link?: string[];
   classname: string;
@@ -55,6 +55,13 @@ export interface loaderProps {
   width: string;
   height: string;
   classname?: string;
+}
+
+export interface ScrollToTopProps {
+  colorFill: string;
+  colorStroke: string;
+  width: string;
+  height: string;
 }
 
 export interface flecheProps {

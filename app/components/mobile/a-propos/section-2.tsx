@@ -39,7 +39,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           pellentesque donec hendrerit mi justo...
         </p>
         <div className="w-full">
-          <Link href="mailto:contact@lilousnow.fr" passHref>
+          <Link href="mailto:contact@lilousnow.fr" passHref scroll={false}>
             <button className="mb-12 group mx-auto roup w-3/4 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
               <span className="texte-button group-hover:text-blanc">
                 Contactez-moi

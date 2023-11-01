@@ -17,7 +17,12 @@ export const Questions = ({
     },
   });
   return (
-    <div className={classname} id="questions">
+    <div
+      className={`flex ${
+        isMobile ? "flex-col" : "flex-row flex-wrap"
+      } ${classname}`}
+      id="questions"
+    >
       {loading && (
         <Loader
           classname={"mt-10"}
@@ -35,9 +40,9 @@ export const Questions = ({
           .map((val: any) => {
             return (
               <div
-                className={`${
-                  isMobile ? "flex-col" : "flex-row flex-wrap"
-                }' w-3/4 my-10 min-w-[310px] h-[300px] min-h-[300px] card-questions group flex mx-auto'`}
+                className={`flex-col my-10 min-w-[310px] h-[300px] min-h-[300px] card-questions group flex mx-auto ${
+                  isMobile ? "w-3/4" : "w-[300px]"
+                }`}
                 key={val.id}
               >
                 <div className="question group-hover:hidden bg-gris w-full h-full text-center flex items-center cursor-pointer">

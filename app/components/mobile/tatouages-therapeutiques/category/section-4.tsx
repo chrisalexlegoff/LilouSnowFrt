@@ -13,7 +13,6 @@ const SectionQuatre = ({ logoWhite, category }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
-  console.log(response, category);
   return (
     <section
       id="section-4-tarif"
