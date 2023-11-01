@@ -61,6 +61,7 @@ export const Footer = () => {
         <div className=" !text-blanc flex justify-center">
           <p>Site réalisé par :&nbsp;</p>
           <Link
+            scroll={false}
             href="https://dualdclic.fr"
             target="_blank"
             rel="noopener noreferrer"

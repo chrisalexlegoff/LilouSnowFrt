@@ -17,10 +17,18 @@
 
 @layer base {
   @font-face {
+    font-family: "Myriad Pro";
+    src: url("../public/font/Myriad-Pro.eot");
+    src: url("../public/font/Myriad-Pro.eot?#iefix") format("embedded-opentype"),
+      url("../public/font/Myriad-Pro.woff2") format("woff2"),
+      url("../public/font/Myriad-Pro.woff") format("woff"),
+      url("../public/font/Myriad-Pro.ttf") format("truetype"),
+      url("../public/font/Myriad-Pro.svg#Myriad Pro") format("svg");
+  }
+  @font-face {
     font-family: "Myriad Pro Condensed";
-    src: url("../public/font/MyriadProCondensed.eot"); /* IE9*/
-    src: url("../public/font/MyriadProCondensed.eot?#iefix")
-        format("embedded-opentype"),
+    src: url("../public/font/Myriad-Pro.eot"); /* IE9*/
+    src: url("../public/font/Myriad-Pro.eot?#iefix") format("embedded-opentype"),
       /* IE6-IE8 */ url("../public/font/MyriadProCondensed.woff2")
         format("woff2"),
       /* chrome、firefox */ url("../public/font/MyriadProCondensed.woff")
@@ -65,7 +73,7 @@
 
   body {
     @apply no-scrollbar;
-    font-family: "Myriad Pro Condensed", sans-serif !important;
+    font-family: "Myriad Pro", sans-serif !important;
   }
 
   ul {
@@ -73,6 +81,7 @@
   }
   img {
     margin: auto;
+    max-width: inherit;
   }
 
   #mentions-legales a {
@@ -88,6 +97,34 @@
   .titre-reseau > p {
     font-family: "Myriad Pro";
   } */
+
+  #nav-desktop a {
+    /* display: block; */
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.4rem; /* 116.667% */
+    letter-spacing: 0.02em;
+  }
+
+  #nav-desktop .nav-desktop-link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 4px;
+    background: var(--dore);
+    transform: translateY(-2px);
+    transition: width 0.3s;
+  }
+
+  #nav-desktop .nav-desktop-link:hover::after {
+    width: 100%;
+    transition: width 0.3s;
+  }
+
+  #nav-desktop .nav-desktop-link.active::after {
+    width: 100%;
+  }
 
   /* DEFAULT STYLES - MOBILE-FIRST */
   .white h1,
@@ -262,8 +299,8 @@
   /* min 768px == md */
   @media only screen and (min-width: 768px) {
     h1 {
-      font-size: 4.563rem;
-      line-height: 4.375rem;
+      font-size: 2.563rem;
+      line-height: 2.375rem;
     }
     h1.h1-maintenance {
       font-weight: 700;
@@ -271,8 +308,8 @@
       letter-spacing: 0.08em;
     }
     h2 {
-      font-size: 2.875rem;
-      line-height: 3.438rem;
+      font-size: 1.875rem;
+      line-height: 1.438rem;
     }
     h2.h2-maintenance {
       font-weight: 400;
@@ -280,7 +317,7 @@
       letter-spacing: 0.13em;
     }
     h3 {
-      font-size: 2.25rem;
+      font-size: 1.25rem;
       letter-spacing: 0.02em;
     }
     h3.h3-maintenance {
@@ -298,14 +335,25 @@
       font-family: "Myriad Pro Condensed Bold";
     }
     p {
-      font-size: 1.5rem;
-      line-height: 1.75rem;
-      letter-spacing: 0.05em;
+      font-family: "Myriad Pro Condensed";
+      font-size: 1.35rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.4rem; /* 93.611% */
+      letter-spacing: 0.03em;
+    }
+    footer p {
+      font-family: "Myriad Pro Condensed";
+      font-size: 1.15rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 28px; /* 116.667% */
+      letter-spacing: 0.035em;
     }
     p.paragraphe-1-maintenance {
       font-style: normal;
       font-weight: 400;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       line-height: 1.2rem;
       letter-spacing: 0.05em;
     }
@@ -315,6 +363,10 @@
       font-size: 2rem;
       line-height: 1.425rem;
       letter-spacing: 0.02em;
+    }
+
+    p.villes {
+      line-height: 1.8rem;
     }
     span {
       font-size: 1rem;

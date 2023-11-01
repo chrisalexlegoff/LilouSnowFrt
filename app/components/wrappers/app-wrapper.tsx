@@ -7,6 +7,10 @@ import { Footer } from "../mobile/footer/footer";
 import { GoBackButton } from "../go-back/go-back-button";
 import { usePathname } from "next/navigation.js";
 import CookieConsent from "react-cookie-consent";
+import NavDesktop from "../desktop/nav/nav";
+import ReseauxDesktop from "../widgets/reseaux-desktop";
+import { FooterDesktop } from "../desktop/footer/footer";
+import ScrollButton from "../scroll-top/scroll-button";
 
 export default function AppWrapper({
   children,
@@ -21,6 +25,7 @@ export default function AppWrapper({
   return (
     <>
       <Nav />
+      <NavDesktop />
       {pathname != "/maintenance" && pathname != "/" && (
         <div className="relative grow flex w-full items-center md:hidden z-50 mix-blend-exclusion">
           <GoBackButton
@@ -31,6 +36,7 @@ export default function AppWrapper({
       )}
       {children}
       <Footer />
+      <FooterDesktop />
       <CookieConsent
         buttonText="Je comprends"
         style={{ background: "#000707", alignItems: "center" }}
@@ -54,6 +60,16 @@ export default function AppWrapper({
           "md:hidden fixed w-full bottom-0 grid grid-rows-1 h-[9vh] bg-blanc opacity-80 z-10"
         }
       />
+      <ReseauxDesktop
+        colorIcon="#FFFFFF"
+        widthIcon={"40px"}
+        heightIcon={"34px"}
+        slug={["facebook", "messenger", "instagram", "email"]}
+        classname={
+          "hidden md:block fixed top-1/2 -translate-y-1/2 -translate-x-1/2 right-0  z-20 mix-blend-exclusion"
+        }
+      />
+      <ScrollButton />
     </>
   );
 }

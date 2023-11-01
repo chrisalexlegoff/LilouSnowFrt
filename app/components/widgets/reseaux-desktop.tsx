@@ -5,14 +5,13 @@ import { EmailIcon } from "@/app/lib/svg/reseaux/email";
 import { FacebookIcon } from "@/app/lib/svg/reseaux/facebook";
 import { MessengerIcon } from "@/app/lib/svg/reseaux/messenger";
 import { InstagramIcon } from "@/app/lib/svg/reseaux/instagram";
-import { HomeIndicatorIcon } from "@/app/lib/svg/reseaux/home-indicator";
 import Link from "next/link";
 import Loader from "../loader/loader";
+import { LignesDesktop } from "@/app/lib/svg/reseaux/lignes-desktop";
 
-const Reseaux = ({
+const ReseauxDesktop = ({
   slug,
   classname,
-  homeIcon,
   colorIcon,
   widthIcon,
   heightIcon,
@@ -27,7 +26,8 @@ const Reseaux = ({
   });
   return (
     <div className={classname} id="reseaux">
-      <div className="flex w-full  lg:justify-between justify-around items-center">
+      <div className="flex flex-col w-full justify-around items-center relative">
+        <LignesDesktop color={"#FFFFFF"} width="2px" height="150px" />
         {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
         {error && <p>{error.message}</p>}
         {!loading &&
@@ -39,7 +39,7 @@ const Reseaux = ({
                   <Link
                     target="_blank"
                     href={val.link}
-                    className="svg-reseaux-mobile"
+                    className="my-2"
                     key={val.id}
                   >
                     {val.slug === "facebook" && (
@@ -75,14 +75,10 @@ const Reseaux = ({
               }
             });
           })}
+        <LignesDesktop color={"#FFFFFF"} width="2px" height="150px" />
       </div>
-      {homeIcon && (
-        <div className="basis-full bottom-0">
-          <HomeIndicatorIcon />
-        </div>
-      )}
     </div>
   );
 };
 
-export default Reseaux;
+export default ReseauxDesktop;
