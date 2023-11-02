@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { sectionsProps } from "../../../../lib/interfaces/interfaces";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../../loader/loader";
 import { Slider } from "../../../before-after/beforeAfter";
 import { Fleche } from "@/app/lib/svg/Accueil/fleche";

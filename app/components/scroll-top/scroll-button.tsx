@@ -34,15 +34,18 @@ const ScrollButton = () => {
         id="scroll-to-top"
         className={`${
           visible ? "md:block" : "hidden"
-        } fixed right-12 bottom-6 z-[100] cursor-pointer mix-blend-exclusion`}
+        } fixed right-12 bottom-2 cursor-pointer mix-blend-exclusion`}
       >
         <div className="group">
-          <div className="block" onClick={scrollToTop}>
+          <div
+            className="block group-hover:-translate-y-2"
+            onClick={scrollToTop}
+          >
             <ScrollToTopButton
               colorFill="#FFFFFF"
               colorStroke="#000707"
-              width="84px"
-              height="83px"
+              width="64px"
+              height="63px"
             />
           </div>
         </div>
