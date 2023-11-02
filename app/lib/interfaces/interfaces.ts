@@ -57,6 +57,10 @@ export interface loaderProps {
   classname?: string;
 }
 
+export interface contactDesktopProps {
+  classname?: string;
+}
+
 export interface ScrollToTopProps {
   colorFill: string;
   colorStroke: string;
@@ -76,6 +80,7 @@ export interface hexogoneProps {
 export interface videoProps {
   classname: string;
   videoName: string;
+  isMobile: boolean;
 }
 
 export interface retourProps {

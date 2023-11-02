@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import Video from "../../video/video";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../loader/loader";
 
 const SectionDeux = ({ logoWhite }: sectionsProps) => {
@@ -52,6 +52,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           {error && <p>{error.message}</p>}
           {!loading && !error && (
             <Video
+              isMobile
               videoName={response?.data["hydra:member"][0].presentationName}
               classname={"w-full mt-10"}
             />

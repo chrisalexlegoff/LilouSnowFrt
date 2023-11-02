@@ -4,7 +4,7 @@ import { ReactPlayerIcon } from "@/app/lib/svg/divers/react-player-icon";
 import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
-const Video = ({ classname, videoName }: videoProps) => {
+const Video = ({ classname, videoName, isMobile }: videoProps) => {
   const playerRef = useRef<ReactPlayer>(null);
   const [play, setPlay] = useState<boolean>(false);
   useEffect(() => {
@@ -14,12 +14,33 @@ const Video = ({ classname, videoName }: videoProps) => {
     }
     // If the video url changes, playerRef puts the player back in light mode
   }, [play]);
-  return (
-    <div className={`${classname}`}>
+  return isMobile ? (
+    <div id="player" className={`${classname}`}>
       <ReactPlayer
         light={
           <img
             src="\img\mobile\a-propos\fond-video-presentation.png"
+            alt="Thumbnail"
+          />
+        }
+        url={`${process.env.NEXT_PUBLIC_VIDEOS_URL}/${videoName}`}
+        controls
+        config={{ file: { attributes: { controlsList: "nodownload" } } }}
+        pip={false}
+        ref={playerRef}
+        playing
+        onEnded={() => setPlay(!play)}
+        width={"100%"}
+        height={"100%"}
+        playIcon={<ReactPlayerIcon color={"#FFFFFF"} classname={"absolute"} />}
+      />
+    </div>
+  ) : (
+    <div id="player" className={`${classname}`}>
+      <ReactPlayer
+        light={
+          <img
+            src="\img\desktop\divers\preview-video-desktop.png"
             alt="Thumbnail"
           />
         }

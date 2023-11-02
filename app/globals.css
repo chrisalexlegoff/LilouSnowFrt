@@ -84,6 +84,10 @@
     max-width: inherit;
   }
 
+  #player img {
+    max-width: 100%;
+  }
+
   #mentions-legales a {
     color: #0ea7c9;
   }
@@ -308,8 +312,9 @@
       letter-spacing: 0.08em;
     }
     h2 {
-      font-size: 1.875rem;
-      line-height: 1.438rem;
+      font-family: "Myriad Pro";
+      font-size: 1.675rem;
+      line-height: 1.338rem;
     }
     h2.h2-maintenance {
       font-weight: 400;

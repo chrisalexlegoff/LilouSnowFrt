@@ -2,7 +2,7 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import Video from "../../video/video";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../loader/loader";
 
 const SectionTrois = ({ logoWhite }: sectionsProps) => {
@@ -34,6 +34,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
                   <div key={index} className="my-10">
                     <p className="s3Tt mb-2 text-center">{video.nom}</p>
                     <Video
+                      isMobile
                       videoName={video.temoignageName}
                       classname={"w-full"}
                     />

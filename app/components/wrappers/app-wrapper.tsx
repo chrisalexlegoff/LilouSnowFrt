@@ -27,12 +27,20 @@ export default function AppWrapper({
       <Nav />
       <NavDesktop />
       {pathname != "/maintenance" && pathname != "/" && (
-        <div className="relative grow flex w-full items-center md:hidden z-50 mix-blend-exclusion">
-          <GoBackButton
-            classname={"flex items-center fixed left-8 top-[13vh]"}
-            color={"#FFFFFF"}
-          />
-        </div>
+        <>
+          <div className="relative grow flex w-full items-center md:hidden z-50 mix-blend-exclusion">
+            <GoBackButton
+              classname={"flex items-center fixed left-8 top-[13vh]"}
+              color={"#FFFFFF"}
+            />
+          </div>
+          <div className="relative grow w-full items-center hidden md:flex z-50 mix-blend-exclusion">
+            <GoBackButton
+              classname={"flex items-center fixed left-24 top-[55vh]"}
+              color={"#FFFFFF"}
+            />
+          </div>
+        </>
       )}
       {children}
       <Footer />

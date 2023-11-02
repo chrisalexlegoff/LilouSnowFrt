@@ -1,6 +1,6 @@
 "use client";
 import { questionsProps } from "@/app/lib/interfaces/interfaces.js";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import React from "react";
 import Loader from "../loader/loader";
 

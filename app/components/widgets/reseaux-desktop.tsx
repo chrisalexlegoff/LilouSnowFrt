@@ -1,5 +1,5 @@
 "use client";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import { reseauxProps } from "@/app/lib/interfaces/interfaces";
 import { EmailIcon } from "@/app/lib/svg/reseaux/email";
 import { FacebookIcon } from "@/app/lib/svg/reseaux/facebook";

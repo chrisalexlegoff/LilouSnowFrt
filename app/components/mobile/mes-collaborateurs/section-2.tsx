@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
-import useAxios from "@/app/lib/helpers/use-axios";
+import useAxios from "@/app/lib/interfaces/use-axios";
 import { Hexagone } from "@/app/lib/svg/divers/hexagone";
 import Loader from "../../loader/loader";
 
