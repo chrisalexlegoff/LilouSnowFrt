@@ -32,8 +32,8 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
                   <div key={index} className="my-10">
                     <p className="s3Tt mb-2 text-center">{video.nom}</p>
                     <Video
-                      isMobile
-                      src="/img/mobile/a-propos/fond-video-presentation.png"
+                      isMobile={false}
+                      src="/img/desktop/divers/fond-videos-desktop.png"
                       videoName={video.temoignageName}
                       classname={"w-full"}
                     />

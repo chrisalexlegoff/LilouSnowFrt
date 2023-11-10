@@ -14,8 +14,8 @@
   color: var(--blanc);
 }
 
-#before-after .visible .AB-visible {
-  display: none;
+#before-after .AB-visible.visible {
+  width: 100%;
 }
 
 #before-after .visible .slider,

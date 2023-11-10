@@ -35,6 +35,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
                     <p className="s3Tt mb-2 text-center">{video.nom}</p>
                     <Video
                       isMobile
+                      src="/img/mobile/a-propos/fond-video-presentation.png"
                       videoName={video.temoignageName}
                       classname={"w-full"}
                     />

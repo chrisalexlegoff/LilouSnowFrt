@@ -53,6 +53,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           {!loading && !error && (
             <Video
               isMobile
+              src="/img/mobile/a-propos/fond-video-presentation.png"
               videoName={response?.data["hydra:member"][0].presentationName}
               classname={"w-full mt-10"}
             />
