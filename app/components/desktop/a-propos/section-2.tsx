@@ -69,6 +69,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
           {!loading && !error && (
             <Video
               isMobile={false}
+              src="/img/desktop/divers/preview-video-desktop.png"
               videoName={response?.data["hydra:member"][0].presentationName}
               classname={"w-full mt-10"}
             />

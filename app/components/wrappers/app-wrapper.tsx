@@ -36,7 +36,7 @@ export default function AppWrapper({
           </div>
           <div className="relative grow w-full items-center hidden md:flex z-50 mix-blend-exclusion">
             <GoBackButton
-              classname={"flex items-center fixed left-24 top-[55vh]"}
+              classname={"flex items-center fixed left-24 top-[13vh]"}
               color={"#FFFFFF"}
             />
           </div>

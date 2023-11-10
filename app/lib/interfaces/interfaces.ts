@@ -81,6 +81,7 @@ export interface videoProps {
   classname: string;
   videoName: string;
   isMobile: boolean;
+  src: string;
 }
 
 export interface retourProps {

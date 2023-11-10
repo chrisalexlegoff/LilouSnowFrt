@@ -4,7 +4,7 @@ import { ReactPlayerIcon } from "@/app/lib/svg/divers/react-player-icon";
 import React, { useEffect, useRef, useState } from "react";
 import ReactPlayer from "react-player";
 
-const Video = ({ classname, videoName, isMobile }: videoProps) => {
+const Video = ({ classname, videoName, isMobile, src }: videoProps) => {
   const playerRef = useRef<ReactPlayer>(null);
   const [play, setPlay] = useState<boolean>(false);
   useEffect(() => {
@@ -17,12 +17,7 @@ const Video = ({ classname, videoName, isMobile }: videoProps) => {
   return isMobile ? (
     <div id="player" className={`${classname}`}>
       <ReactPlayer
-        light={
-          <img
-            src="\img\mobile\a-propos\fond-video-presentation.png"
-            alt="Thumbnail"
-          />
-        }
+        light={<img src={src} alt="Thumbnail" />}
         url={`${process.env.NEXT_PUBLIC_VIDEOS_URL}/${videoName}`}
         controls
         config={{ file: { attributes: { controlsList: "nodownload" } } }}
@@ -38,12 +33,7 @@ const Video = ({ classname, videoName, isMobile }: videoProps) => {
   ) : (
     <div id="player" className={`${classname}`}>
       <ReactPlayer
-        light={
-          <img
-            src="\img\desktop\divers\preview-video-desktop.png"
-            alt="Thumbnail"
-          />
-        }
+        light={<img src={src} alt="Thumbnail" />}
         url={`${process.env.NEXT_PUBLIC_VIDEOS_URL}/${videoName}`}
         controls
         config={{ file: { attributes: { controlsList: "nodownload" } } }}
