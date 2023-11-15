@@ -32,7 +32,7 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
                   <div key={index} className="my-10">
                     <p className="s3Tt mb-2 text-center">{video.nom}</p>
                     <Video
-                      isMobile={false}
+                      withImage
                       src="/img/desktop/divers/fond-videos-desktop.png"
                       videoName={video.temoignageName}
                       classname={"w-full"}

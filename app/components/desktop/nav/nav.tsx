@@ -117,29 +117,29 @@ const NavDesktop = (): JSX.Element => {
             </div>
             <div
               className={`nav-desktop-link h-full ${
-                pathname == "/mes-collaborateurs" ? "active" : ""
+                pathname == "/partenariat" ? "active" : ""
               }`}
             >
               <Link
-                href="/mes-collaborateurs"
+                href="/partenariat"
                 scroll={false}
                 className={
-                  pathname == "/mes-collaborateurs"
+                  pathname == "/partenariat"
                     ? `${classNormal} link text-dore`
                     : `${classNormal} link`
                 }
               >
-                Collaborateurs
+                Partenariat
               </Link>
             </div>
             <div
               className={`nav-desktop-link h-full ${
-                pathname == "/Hommages" ? "active" : ""
+                pathname == "/hommages" ? "active" : ""
               }`}
             >
               <Link
                 scroll={false}
-                href="/Hommages"
+                href="/hommages"
                 className={
                   pathname == "/hommages"
                     ? `${classNormal} link text-dore`

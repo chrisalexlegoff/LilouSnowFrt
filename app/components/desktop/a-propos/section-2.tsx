@@ -25,13 +25,27 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
         <div className="min-h-[800px] grid grid-cols-5 bg-blanc mx-4 p-12">
           <div
             className="mx-auto w-full relative col-span-2"
-            style={{
-              backgroundImage: `url('/img/mobile/a-propos/fond-bas.png')`,
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
+            // style={{
+            //   backgroundImage: `url('/img/mobile/a-propos/fond-bas.png')`,
+            //   backgroundPosition: "center",
+            //   backgroundRepeat: "no-repeat",
+            //   backgroundSize: "cover",
+            // }}
           >
+            <div className="relative max-w-2xl mx-auto">
+              {loading && (
+                <Loader color={"#000707"} width={"53"} height={"45px"} />
+              )}
+              {error && <p>{error.message}</p>}
+              {!loading && !error && (
+                <Video
+                  withImage={false}
+                  src="/img/desktop/divers/preview-video-desktop.png"
+                  videoName={response?.data["hydra:member"][0].presentationName}
+                  classname={"w-full mt-10"}
+                />
+              )}
+            </div>
             <FloconSectionDeuxAProposDesktop
               color="#FFFFFF"
               width="183px"
@@ -62,18 +76,6 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
               </Link>
             </div>
           </div>
-        </div>
-        <div className="relative max-w-2xl mx-auto">
-          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
-          {error && <p>{error.message}</p>}
-          {!loading && !error && (
-            <Video
-              isMobile={false}
-              src="/img/desktop/divers/preview-video-desktop.png"
-              videoName={response?.data["hydra:member"][0].presentationName}
-              classname={"w-full mt-10"}
-            />
-          )}
         </div>
         <ContactDesktop classname="max-w-7xl mx-4 my-8 py-12 px-20 bg-blanc flex flex-wrap justify-center" />
       </div>

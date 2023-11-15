@@ -45,7 +45,7 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
                     <div className="my-10">
                       <p className="s3Tt mb-6 text-center">{video.nom}</p>
                       <Video
-                        isMobile={false}
+                        withImage
                         src="/img/desktop/divers/fond-videos-desktop.png"
                         videoName={video.temoignageName}
                         classname={"w-full"}

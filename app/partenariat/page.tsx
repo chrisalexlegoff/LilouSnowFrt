@@ -1,8 +1,8 @@
 import React from "react";
-import SectionUne from "../components/mobile/mes-collaborateurs/section-1";
-import SectionDeux from "../components/mobile/mes-collaborateurs/section-2";
-import SectionUneDesktop from "../components/desktop/mes-collaborateurs/section-1";
-import SectionDeuxDesktop from "../components/desktop/mes-collaborateurs/section-2";
+import SectionUne from "../components/mobile/partenariat/section-1";
+import SectionDeux from "../components/mobile/partenariat/section-2";
+import SectionUneDesktop from "../components/desktop/partenariat/section-1";
+import SectionDeuxDesktop from "../components/desktop/partenariat/section-2";
 
 const MesCollaborateurs = () => {
   return (
