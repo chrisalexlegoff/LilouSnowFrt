@@ -88,11 +88,11 @@ export const FooterDesktop = () => {
             Tatouages thérapeutiques
           </Link>
           <Link
-            href={"/collaborateurs"}
+            href={"/partenariat"}
             scroll={false}
             className="text-right hover:text-dore"
           >
-            Collaborateurs
+            Partenariat
           </Link>
           <Link
             href={"/hommages"}

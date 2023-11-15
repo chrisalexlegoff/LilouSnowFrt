@@ -21,9 +21,21 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
         logoWhite ? "white" : "black"
       }`}
     >
-      <div className="min-h-screen max-w-md mx-auto flex flex-col justify-around items-center pt-32 text-white w-10/12">
+      <div className="min-h-screen max-w-md mx-auto flex flex-col justify-around items-center text-white w-10/12">
+        <div className="relative mb-24">
+          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+          {error && <p>{error.message}</p>}
+          {!loading && !error && (
+            <Video
+              withImage={false}
+              src="/img/mobile/a-propos/fond-video-presentation.png"
+              videoName={response?.data["hydra:member"][0].presentationName}
+              classname={"w-full mt-10"}
+            />
+          )}
+        </div>
         <h2>Lilou Snow</h2>
-        <div
+        {/* <div
           className="mx-auto my-10 h-[350px] w-full relative"
           style={{
             backgroundImage: `url('/img/mobile/a-propos/fond-bas.png')`,
@@ -31,8 +43,8 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-        />
-        <p className="text-justify min-h-60">
+        /> */}
+        <p className="text-justify min-h-60 mt-10">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum
           platea accumsan molestie sollicitudin. Tellus sed porttitor accumsan
           eu vel in. Nunc condimentum at neque et magna nulla diam. Vitae,
@@ -46,18 +58,6 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
               </span>
             </button>
           </Link>
-        </div>
-        <div className="relative mb-24">
-          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
-          {error && <p>{error.message}</p>}
-          {!loading && !error && (
-            <Video
-              isMobile
-              src="/img/mobile/a-propos/fond-video-presentation.png"
-              videoName={response?.data["hydra:member"][0].presentationName}
-              classname={"w-full mt-10"}
-            />
-          )}
         </div>
       </div>
     </section>

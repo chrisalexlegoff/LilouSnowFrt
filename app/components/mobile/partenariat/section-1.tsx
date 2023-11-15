@@ -1,15 +1,15 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 
-const SectionUneDesktop = ({ logoWhite }: sectionsProps) => {
+const SectionUne = ({ logoWhite }: sectionsProps) => {
   return (
     <section
-      id="section-1-desktop"
+      id="section-1"
       className={`w-screen ${logoWhite ? "white" : "black"}`}
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[60vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
             backgroundImage: `url('/img/mobile/a-propos/fond-haut.png')`,
             backgroundPosition: "center",
@@ -17,16 +17,10 @@ const SectionUneDesktop = ({ logoWhite }: sectionsProps) => {
             backgroundSize: "cover",
           }}
         >
-          <div className="max-w-md grow flex flex-col justify-center">
+          <div className="max-w-md grow flex flex-col">
             <div>
-              <h1 className="s1AP mb-2">
-                Mes
-                <br />
-                Collaborateurs
-              </h1>
-              <p className="pt-10">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              </p>
+              <h1 className="s1AP mb-2">Partenariat</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
         </div>
@@ -35,4 +29,4 @@ const SectionUneDesktop = ({ logoWhite }: sectionsProps) => {
   );
 };
 
-export default SectionUneDesktop;
+export default SectionUne;

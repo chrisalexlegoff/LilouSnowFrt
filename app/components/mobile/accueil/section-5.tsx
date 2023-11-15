@@ -26,7 +26,7 @@ const SectionCinq = ({ logoWhite }: sectionsProps) => {
           les espacer, les stopper pour quelques raisons que ce soit : il n’y a
           aucune obligation de continuer les soins
         </p>
-        <p className="text-justify">
+        {/* <p className="text-justify">
           Les démarches préalable de création, unique et sur-mesure couteront
           50€. Selon la prestation souhaitée, le prix variera entre 300 et 450
           euros la journée.
@@ -34,7 +34,7 @@ const SectionCinq = ({ logoWhite }: sectionsProps) => {
         <p className="text-justify">
           Plus de détail sur les pages correspondants aux soins demandés. Vous
           pouvez également me contacter directement.
-        </p>
+        </p> */}
         <div className="w-full">
           <Link href="mailto:contact@lilousnow.fr" passHref scroll={false}>
             <button className="group mx-auto roup w-3/4 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">

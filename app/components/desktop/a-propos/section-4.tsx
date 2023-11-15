@@ -34,7 +34,7 @@ const SectionQuatreDesktop = ({ logoWhite }: sectionsProps) => {
               nulla diam. Vitae, pellentesque donec hendrerit mi justo...
             </p>
             <div className="w-full">
-              <Link href="/collaborateurs" passHref scroll={false}>
+              <Link href="/partenariat" passHref scroll={false}>
                 <button className="mt-12 group w-60 hover:bg-dore h-20 block border-2 text-dore border-dore">
                   <div className="texte-button group-hover:text-blanc">
                     Voir mes partenaires

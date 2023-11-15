@@ -75,17 +75,17 @@ const Nav = (): JSX.Element => {
             scroll={false}
             onClick={() => setOpen(!open)}
             className="text-center"
-            href="/mes-collaborateurs"
+            href="/partenariat"
           >
-            <h3>Mes collaborateurs</h3>
+            <h3>Partenariat</h3>
           </Link>
           <Link
             scroll={false}
             onClick={() => setOpen(!open)}
             className="text-center"
-            href="/hommage"
+            href="/hommages"
           >
-            <h3>Hommage</h3>
+            <h3>Hommages</h3>
           </Link>
           <Link
             onClick={() => setOpen(!open)}

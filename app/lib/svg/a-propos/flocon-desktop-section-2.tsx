@@ -7,7 +7,7 @@ export const FloconSectionDeuxAProposDesktop = ({
 }: loaderProps) => {
   return (
     <svg
-      className="mix-blend-exclusion absolute right-0 translate-x-[45%] translate-y-1 z-10"
+      className="mix-blend-exclusion absolute top-0 right-0 translate-x-[45%] translate-y-1 z-10"
       width={width}
       height={height}
       viewBox="0 0 184 159"

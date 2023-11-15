@@ -80,8 +80,8 @@ export interface hexogoneProps {
 export interface videoProps {
   classname: string;
   videoName: string;
-  isMobile: boolean;
   src: string;
+  withImage: boolean;
 }
 
 export interface retourProps {
