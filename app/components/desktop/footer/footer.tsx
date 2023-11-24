@@ -14,6 +14,7 @@ export const FooterDesktop = () => {
         <Image
           src="/img/mobile/accueil/accueil-mobile-section-7.png"
           alt="fond accueil section mobile 7"
+          priority
           width={"212"}
           height={"212"}
         />
@@ -48,8 +49,7 @@ export const FooterDesktop = () => {
             </p>
             <div className="">
               <p className="text-left !text-blanc">
-                Nord : Yours, 260 rue des bourreliers 59320 Hallennes lez
-                Haubourdin
+                Nord : Yours, 32 Ter rue du Bas, 59320 Radinghem-en-Weppes
               </p>
               <p className="text-left !text-blanc">
                 Paris : CCC Atelier Tatouage, 40 rue de Charenton, Bastille
@@ -65,55 +65,22 @@ export const FooterDesktop = () => {
             </div>
           </div>
         </div>
-        <div className="flex-col !text-blanc hidden xl:flex py-12 justify-between">
-          <Link
-            href={"/"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            Accueil
-          </Link>
-          <Link
-            href={"/a-propos"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            A propos
-          </Link>
-          <Link
-            href={"/tatouages-therapeutiques"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            Tatouages thérapeutiques
-          </Link>
-          <Link
-            href={"/partenariat"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            Partenariat
-          </Link>
-          <Link
-            href={"/hommages"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            Hommages
-          </Link>
-          <Link
-            href={"/mentions-legales"}
-            scroll={false}
-            className="text-right hover:text-dore"
-          >
-            Mentions légales - Politique de confidentialité
-          </Link>
-        </div>
       </div>
       <div className="w-full bg-dore mx-auto py-6">
         <p className="!text-blanc flex justify-center">
           Lilou Snow, tatouages thérapeutiques&nbsp;&copy;&nbsp;copyright&nbsp;
-          {CurrentDateYear} - site réalisé par :&nbsp;{" "}
+          {CurrentDateYear} - &nbsp;{" "}
+          <Link
+            scroll={false}
+            href="/mentions-legales"
+            rel="noopener noreferrer"
+            className=""
+          >
+            Mentions légales
+          </Link>
+        </p>
+        <p className="!text-blanc flex justify-center">
+          site réalisé par :&nbsp;{" "}
           <Link
             scroll={false}
             href="https://dualdclic.fr"

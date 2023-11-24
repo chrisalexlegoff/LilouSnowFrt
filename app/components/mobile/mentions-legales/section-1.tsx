@@ -9,7 +9,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[40vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
             backgroundImage: `url('/img/mobile/a-propos/fond-haut.png')`,
             backgroundPosition: "center",

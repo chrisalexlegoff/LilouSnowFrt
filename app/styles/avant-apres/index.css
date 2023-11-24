@@ -28,3 +28,25 @@
 #before-after .visible .slider-text-alt {
   display: block;
 }
+
+@keyframes animate-scale {
+  0% {
+    transform: translateX(0) scaleX(1);
+  }
+  25% {
+    transform: translateX(-5px) scaleX(1.5);
+  }
+  50% {
+    transform: translateX(0) scaleX(1);
+  }
+  75% {
+    transform: translateX(5px) scaleX(1.5);
+  }
+  100% {
+    transform: translateX(0) scaleX(1);
+  }
+}
+
+.animate-scale {
+  animation: animate-scale 3s linear infinite;
+}

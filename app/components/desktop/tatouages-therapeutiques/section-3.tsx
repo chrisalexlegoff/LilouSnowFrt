@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
+import Link from "next/link";
 import Video from "../../video/video";
 import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../loader/loader";
@@ -52,17 +53,22 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
                       />
                     </div>
                     <div className="AB-invisible !bg-blanc w-full pl-6 pt-0 lg:pt-24">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Nunc neque convallis faucibus feugiat sit eget. Iaculis
-                      eros adipiscing sed porttitor at aenean interdum. Nibh
-                      tortor lectus blandit quisque pharetra, porta blandit ut
-                      scelerisque. Vulputate et ultricies et a integer quis.
-                      Diam leo lectus aliquet venenatis vulputate. Ipsum
-                      ullamcorper ac interdum pretium. Mi, id at integer
-                      porttitor tincidunt quisque volutpat rhoncus magna. Dolor
-                      faucibus sed non, pretium morbi. Volutpat vitae massa
-                      mattis eros nulla fermentum maecenas viverra. Aenean in
-                      eget lacus tristique aliquam est in aliquam.
+                      <p className="entete px-4 my-12 text-center">
+                        {video.description}
+                      </p>
+                      <div className="w-full">
+                        <Link
+                          href={`mailto:${video.link.toLowerCase()}`}
+                          scroll={false}
+                          passHref
+                        >
+                          <button className="mx-auto group w-full max-w-[230px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
+                            <span className="texte-button group-hover:text-blanc">
+                              contacter
+                            </span>
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 );

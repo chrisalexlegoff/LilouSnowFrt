@@ -16,9 +16,7 @@ const SectionQuatre = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-4-tarif"
-      className={`min-h-screen w-screen bg-encre-de-chine ${
-        logoWhite ? "white" : "black"
-      }`}
+      className={`w-screen bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
       {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
       {error && <p>{error.message}</p>}

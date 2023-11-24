@@ -93,9 +93,7 @@ const Nav = (): JSX.Element => {
             href="/mentions-legales"
             scroll={false}
           >
-            <h3>
-              Mentions légales - <br /> Politique de confidentialité
-            </h3>
+            <h3>Mentions légales</h3>
           </Link>
         </div>
       </div>

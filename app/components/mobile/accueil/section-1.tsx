@@ -59,7 +59,8 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
               Covering cicatrices et brûlures
             </h2>
             <h3 className="h3-accueil-section-1 mt-3">
-              Lille - Paris Lyon - Saint Malo
+              Lille - Paris
+              <br /> Lyon - Saint Malo
             </h3>
           </div>
         </div>

@@ -17,6 +17,7 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
             src="/img/mobile/accueil/fond-accueil-mobile-section-4.png"
             alt="fond accueil section mobile 4"
             fill
+            sizes="auto"
           />
         </div>
         <h2 className="mt-6">Me contacter</h2>

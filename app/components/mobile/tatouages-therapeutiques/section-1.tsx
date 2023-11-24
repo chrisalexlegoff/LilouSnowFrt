@@ -9,7 +9,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[40vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
             backgroundImage: `url(/img/mobile/realisations/fond-entete-realisations-mobile.png)`,
             backgroundPosition: "center",
@@ -24,7 +24,9 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
                 <br />
                 réalisations
               </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <p className="entete px-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
             </div>
           </div>
         </div>

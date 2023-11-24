@@ -76,6 +76,7 @@ export const Slider = ({ imageSrcBefore, imageSrcAfter }: sliderProps) => {
           {/* <div className="bg-white absolute rounded-full h-3 w-3 -left-1 top-[calc(50%-5px)]"> */}
           <div className="absolute -translate-x-1/2 top-[calc(50%-5px)]">
             <svg
+              className="animate-scale"
               fill="white"
               xmlns="http://www.w3.org/2000/svg"
               width="20"
