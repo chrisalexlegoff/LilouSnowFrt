@@ -45,7 +45,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
         </div>
       </div>
       <div
-        className="min-h-[35vh] w-full"
+        className="min-h-[40vh] w-full"
         style={{
           backgroundImage: `url('/img/mobile/temoignages/temoignages-mobile-fond-haut.png')`,
           backgroundPosition: "center",

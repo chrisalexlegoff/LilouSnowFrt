@@ -4,6 +4,7 @@ import { sectionsProps } from "../../../../lib/interfaces/interfaces";
 import Video from "../../../video/video";
 import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../../loader/loader";
+import Link from "next/link.js";
 
 const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
   const { response, loading, error, sendData } = useAxios({
@@ -37,6 +38,22 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
                       videoName={video.temoignageName}
                       classname={"w-full"}
                     />
+                    <p className="entete px-4 my-12 text-center">
+                      {video.description}
+                    </p>
+                    <div className="w-full">
+                      <Link
+                        href={`mailto:${video.link.toLowerCase()}`}
+                        scroll={false}
+                        passHref
+                      >
+                        <button className="mx-auto group w-full max-w-[230px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
+                          <span className="texte-button group-hover:text-blanc">
+                            contacter
+                          </span>
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 );
               })}

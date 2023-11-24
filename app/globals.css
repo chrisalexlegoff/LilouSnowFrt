@@ -181,8 +181,8 @@
   }
   h2.h2-accueil-section-1 {
     font-style: normal;
-    font-weight: 400;
-    font-size: 1.5rem;
+    font-weight: 700;
+    font-size: 1.3rem;
     line-height: 1.813rem;
     letter-spacing: 0.02em;
     color: var(--encre-de-chine);
@@ -229,6 +229,9 @@
     font-size: 1rem;
     line-height: 1.438rem;
     letter-spacing: 0.02em;
+  }
+  p.entete {
+    font-weight: 200;
   }
   p.sColP {
     font-size: 1.6rem;

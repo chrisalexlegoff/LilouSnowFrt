@@ -1,7 +1,7 @@
 import React from "react";
 import { sectionsProps } from "../../../../lib/interfaces/interfaces";
 
-const SectionUne = ({ logoWhite, category }: sectionsProps) => {
+const SectionUneDesktop = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-1"
@@ -9,19 +9,19 @@ const SectionUne = ({ logoWhite, category }: sectionsProps) => {
     >
       <div className="w-full mx-auto">
         <div
-          className="text-center min-h-[35vh] w-full flex flex-col items-center justify-between pt-32"
+          className="text-center min-h-[60vh] w-full flex flex-col items-center justify-between pt-32"
           style={{
-            backgroundImage: `url(/img/mobile/realisations/fond-entete-category-realisations-mobile.png)`,
+            backgroundImage: `url(/img/desktop/realisations/fond-entete-desktop-category-realisations.png)`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         >
-          <div className="max-w-md grow flex flex-col">
+          <div className="max-w-md grow flex flex-col justify-center">
             <div>
-              <p className="s1AP mb-2">
+              <h1 className="s1AP mb-2">
                 {`${category?.charAt(0).toUpperCase()}${category?.slice(1)}`}
-              </p>
+              </h1>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
@@ -31,4 +31,4 @@ const SectionUne = ({ logoWhite, category }: sectionsProps) => {
   );
 };
 
-export default SectionUne;
+export default SectionUneDesktop;

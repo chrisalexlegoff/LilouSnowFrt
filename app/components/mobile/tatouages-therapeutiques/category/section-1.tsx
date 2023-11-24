@@ -19,10 +19,12 @@ const SectionUne = ({ logoWhite, category }: sectionsProps) => {
         >
           <div className="max-w-md grow flex flex-col">
             <div>
-              <p className="s1AP mb-2">
+              <h1 className="s1AP mb-2">
                 {`${category?.charAt(0).toUpperCase()}${category?.slice(1)}`}
+              </h1>
+              <p className="entete px-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
           </div>
         </div>

@@ -2,14 +2,14 @@
 import React from "react";
 import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import { useRouter } from "next/navigation.js";
-import { categoryTab } from "@/app/lib/helpers/categories";
+// import { categoryTab } from "@/app/lib/helpers/categories";
 import Link from "next/link.js";
 
 const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   const router = useRouter();
-  function handleChange(e: any) {
-    router.push(e.target.value, { scroll: false });
-  }
+  // function handleChange(e: any) {
+  //   router.push(e.target.value, { scroll: false });
+  // }
 
   return (
     <section
@@ -17,7 +17,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
       className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-around items-center py-6 px-8">
-        <div className="w-full my-6">
+        {/* <div className="w-full my-6">
           <div
             id="pet-select"
             className="w-full py-2 flex justify-between items-baseline flex-wrap"
@@ -38,7 +38,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
                 );
               })}
           </div>
-        </div>
+        </div> */}
       </div>
       <div className="max-w-7xl grid grid-cols-5 py-12 px-8 mx-auto">
         <div

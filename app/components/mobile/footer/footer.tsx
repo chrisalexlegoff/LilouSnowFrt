@@ -49,8 +49,6 @@ export const Footer = () => {
           className="w-fit mx-auto"
         >
           Mentions légales
-          <br />
-          Politique de confidentialité
         </Link>
       </div>
       <div className="bg-dore mx-auto pt-6 pb-28">

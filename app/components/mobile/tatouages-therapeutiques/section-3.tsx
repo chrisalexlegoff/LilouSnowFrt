@@ -4,6 +4,7 @@ import { sectionsProps } from "../../../lib/interfaces/interfaces";
 import Video from "../../video/video";
 import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../loader/loader";
+import Link from "next/link.js";
 
 const SectionTrois = ({ logoWhite }: sectionsProps) => {
   const { response, loading, error, sendData } = useAxios({
@@ -20,7 +21,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
         logoWhite ? "white" : "black"
       }`}
     >
-      <div className="max-w-md mx-auto flex flex-col justify-around items-center pb-12">
+      <div className="max-w-md mx-auto flex flex-col justify-around items-center py-12">
         <h2>Témoignages</h2>
         <div className="relative">
           {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
@@ -39,6 +40,22 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
                       videoName={video.temoignageName}
                       classname={"w-full"}
                     />
+                    <p className="entete px-4 my-12 text-center">
+                      {video.description}
+                    </p>
+                    <div className="w-full">
+                      <Link
+                        href={`mailto:${video.link.toLowerCase()}`}
+                        scroll={false}
+                        passHref
+                      >
+                        <button className="mx-auto group max-w-[230px] w-full hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
+                          <span className="texte-button group-hover:text-blanc">
+                            contacter
+                          </span>
+                        </button>
+                      </Link>
+                    </div>
                   </div>
                 );
               })}

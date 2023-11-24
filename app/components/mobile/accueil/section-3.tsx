@@ -25,7 +25,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
         <Fleche color="#000707" />
         <Questions
           classname="w-full flex flex-col items-center"
-          nombreElementsAffiches={4}
+          nombreElementsAffiches={3}
           isMobile
         />
         <div className="w-full">
