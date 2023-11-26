@@ -4,9 +4,9 @@ import { sectionsProps } from "../../../../lib/interfaces/interfaces";
 import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../../loader/loader";
 import { Slider } from "../../../before-after/beforeAfter";
-import { Fleche } from "@/app/lib/svg/Accueil/fleche";
+import { CloseImg } from "@/app/lib/svg/avant-apres/close";
 
-const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
+const SectionCinqDesktop = ({ logoWhite, category }: sectionsProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const handleClick = (key: number) => {
     ref.current?.children[key].classList.toggle("visible");
@@ -20,18 +20,19 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
   });
   return (
     <section
-      id="section-5-category-tatoo"
+      id="section-5-desktop"
       className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md w-11/12 mx-auto pt-12">
-        <p className="text-center">Mes réalisations</p>
-        <div className="flex justify-center mt-4">
-          <Fleche color={"#000707"} />
-        </div>
+        <p className="text-center">
+          Les créations en images, réalisées en avant/après
+        </p>
       </div>
-      <div id="before-after" className="max-w-md w-11/12 mx-auto pb-12">
-        <div ref={ref} className="relative pt-10">
-          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+      <div id="before-after" className="max-w-7xl w-11/12 mx-auto pb-12">
+        <div ref={ref} className="relative">
+          {loading && (
+            <Loader color={"#000707"} width={"auto"} height={"auto"} />
+          )}
           {error && <p>{error.message}</p>}
           {!loading &&
             !error &&
@@ -53,48 +54,56 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
                     >
                       Voir plus de détails ...
                     </p>
-                    <p
+                    {/* <p
                       className="slider-text-alt text-center"
                       onClick={() => handleClick(index)}
                     >
                       Fermer ...
-                    </p>
+                    </p> */}
                     <div
-                      className="AB-invisible px-6 mt-12"
-                      onClick={() => handleClick(index)}
+                      className="AB-invisible p-6 relative"
+                      // onClick={() => handleClick(index)}
                     >
                       <div
-                        className="min-h-72 grayscale -translate-y-12"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
+                        className="absolute right-6 top-6"
+                        onClick={() => handleClick(index)}
                       >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Avant
-                        </span>
+                        <CloseImg
+                          color={"#FFFFFF"}
+                          width={"35px"}
+                          height={"auto"}
+                        />
                       </div>
-                      <p className="txt -translate-y-12 pt-6 pb-12 text-justify">
-                        {el.avantText}
-                      </p>
-                      <div
-                        className="min-h-72 -translate-y-12 grayscale-[75%]"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                      >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Après
-                        </span>
+                      <div className="flex col-span-3 lg:col-span-2 py-6">
+                        <div
+                          className="min-h-72 w-1/2 grayscale xl:ml-6"
+                          style={{
+                            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName})`,
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                          }}
+                        />
+                        <div className="w-1/2 px-6">
+                          <span className="block !text-blanc pb-6">Avant</span>
+                          <p className="txt text-justify">{el.avantText}</p>
+                        </div>
                       </div>
-                      <p className="txt -translate-y-12 pt-6 pb-12 text-justify">
-                        {el.apresText}
-                      </p>
+                      <div className="flex row-start-2 lg:col-start-2 col-span-3 lg:col-span-2 py-6">
+                        <div className="w-1/2 px-6">
+                          <span className="block !text-blanc pb-6">Après</span>
+                          <p className="txt text-justify">{el.apresText}</p>
+                        </div>
+                        <div
+                          className="min-h-72 w-1/2 grayscale-[75%] xl:mr-6"
+                          style={{
+                            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName})`,
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundSize: "cover",
+                          }}
+                        />
+                      </div>
                     </div>
                   </div>
                 );
@@ -105,4 +114,4 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
   );
 };
 
-export default SectionCinq;
+export default SectionCinqDesktop;
