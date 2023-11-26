@@ -6,12 +6,21 @@
 }
 
 #before-after .visible .AB-invisible {
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   background: var(--encre-de-chine);
+}
+
+@media screen and (max-width: 768px) {
+  #before-after .visible .AB-invisible {
+    grid-template-columns: inherit;
+    display: block;
+  }
 }
 
 #before-after .visible .AB-invisible .txt {
   color: var(--blanc);
+  font-size: inherit;
 }
 
 #before-after .AB-visible.visible {

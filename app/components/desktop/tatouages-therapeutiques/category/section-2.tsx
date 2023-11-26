@@ -1,16 +1,25 @@
 "use client";
-import React from "react";
+import React, { ReactElement, ReactNode } from "react";
 import { sectionsProps } from "../../../../lib/interfaces/interfaces";
 import { useRouter } from "next/navigation.js";
-// import { categoryTab } from "@/app/lib/helpers/categories";
-import Link from "next/link.js";
+import useAxios from "@/app/lib/interfaces/use-axios";
+import Loader from "@/app/components/loader/loader";
 
-const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
+const SectionDeuxDesktop = ({ logoWhite, category }: sectionsProps) => {
   const router = useRouter();
   // function handleChange(e: any) {
   //   router.push(e.target.value, { scroll: false });
   // }
-
+  const { response, loading, error, sendData } = useAxios({
+    method: "get",
+    url: "/realisations",
+    headers: {
+      accept: "application/ld+json",
+    },
+  });
+  const realisationEnCours = response?.data["hydra:member"].filter(
+    (item: any) => item.categorie === category
+  )[0];
   return (
     <section
       id="section-2-desktop"
@@ -44,24 +53,28 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
         <div
           className="w-full col-span-2"
           style={{
-            backgroundImage: `url('/img/mobile/temoignages/temoignages-mobile-fond-haut.png')`,
+            backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${realisationEnCours?.imageName})`,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
         />
-        <div className="mx-auto flex flex-col justify-around items-center col-span-3 p-12">
-          <h2 className="mb-10">Toutes les réalisations</h2>
-          <p className="text-justify">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque
-            viverra id risus imperdiet quis. Orci turpis tristique non nisi
-            phasellus aliquet dui aenean. Euismod mus eros sed elit. Amet
-            ultricies suscipit curabitur tortor velit mus placerat nisi cras.
-            Aliquet duis sapien pulvinar sed. Lectus orci viverra pellentesque
-            tincidunt eu nulla sed. Lobortis ornare vitae volutpat in molestie
-            eget. Neque amet, facilisis ultrices sit.
-          </p>
-        </div>
+        {loading && <Loader color={"#FFFFFF"} width={"63"} height={"55px"} />}
+        {error && <p>{error.message}</p>}
+        {!loading && !error && (
+          <div className="mx-auto flex flex-col justify-around col-span-3 px-12">
+            <h2 className="mb-10">{realisationEnCours.titreIntroduction}</h2>
+            {realisationEnCours?.introduction.map(
+              (paragraphe: ReactElement, index: number) => {
+                return (
+                  <p key={index} className="mt-6">
+                    {paragraphe}
+                  </p>
+                );
+              }
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

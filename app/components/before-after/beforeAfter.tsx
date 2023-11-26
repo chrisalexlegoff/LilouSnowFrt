@@ -26,7 +26,7 @@ export const Slider = ({ imageSrcBefore, imageSrcAfter }: sliderProps) => {
 
   return (
     <div
-      className="'w-full relative slider cursor-e-resize"
+      className="w-full relative slider cursor-e-resize"
       onMouseUp={handleMouseUp}
     >
       <div
