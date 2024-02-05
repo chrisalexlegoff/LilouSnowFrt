@@ -61,6 +61,13 @@ export interface contactDesktopProps {
   classname?: string;
 }
 
+interface Testimonial {
+  // img: StaticImageData
+  quote: string;
+  name: string;
+  role: string;
+}
+
 export interface ScrollToTopProps {
   colorFill: string;
   colorStroke: string;

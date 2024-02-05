@@ -16,7 +16,6 @@ const SectionHuitDesktop = ({ logoWhite, category }: sectionsProps) => {
   const tarifs = response?.data["hydra:member"].filter(
     (el: any) => el.categorie === category?.toLowerCase()
   );
-  console.log(tarifs);
   return (
     <section
       id="section-8-desktop"
@@ -69,7 +68,7 @@ const SectionHuitDesktop = ({ logoWhite, category }: sectionsProps) => {
                       <p className="text-left !text-encre-de-chine">
                         {tarif.horaires ? tarif.horaires : ""} <br /> Comprend :
                       </p>
-                      {tarif.contenuSeance
+                      {Object.entries(tarif?.contenuSeance)
                         .slice(0, 5)
                         .map((element: any, index: number) => {
                           return (

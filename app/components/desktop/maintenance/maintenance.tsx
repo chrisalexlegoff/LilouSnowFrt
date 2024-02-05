@@ -1,5 +1,5 @@
 "use client";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import * as ReactDOMServer from "react-dom/server";
 import { maintenanceProps } from "../../../lib/interfaces/interfaces";

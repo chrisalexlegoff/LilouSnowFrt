@@ -13,6 +13,7 @@ const SectionQuatre = ({ logoWhite, category }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
+
   return (
     <section
       id="section-4-tarif"
@@ -86,7 +87,7 @@ const SectionQuatre = ({ logoWhite, category }: sectionsProps) => {
                       <p className="text-left !text-encre-de-chine">
                         Comprend :{" "}
                       </p>
-                      {Object.values(tarif.contenuSeance)
+                      {Object.values(tarif?.contenuSeance)
                         .slice(0, 5)
                         .map((element: any, index: number) => {
                           return (
