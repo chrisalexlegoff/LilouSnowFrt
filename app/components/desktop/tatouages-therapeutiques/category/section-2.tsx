@@ -64,10 +64,10 @@ const SectionDeuxDesktop = ({ logoWhite, category }: sectionsProps) => {
         {!loading && !error && (
           <div className="mx-auto flex flex-col justify-around col-span-3 px-12">
             <h2 className="mb-10">{realisationEnCours.titreIntroduction}</h2>
-            {realisationEnCours?.introduction.map(
-              (paragraphe: ReactElement, index: number) => {
+            {Object.values(realisationEnCours?.introduction).map(
+              (paragraphe: any, i: number) => {
                 return (
-                  <p key={index} className="mt-6">
+                  <p key={i} className="mt-6">
                     {paragraphe}
                   </p>
                 );

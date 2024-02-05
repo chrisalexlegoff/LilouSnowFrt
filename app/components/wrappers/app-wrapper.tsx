@@ -11,6 +11,7 @@ import NavDesktop from "../desktop/nav/nav";
 import ReseauxDesktop from "../widgets/reseaux-desktop";
 import { FooterDesktop } from "../desktop/footer/footer";
 import ScrollButton from "../scroll-top/scroll-button";
+import { AvisDesktop } from "../desktop/avis/index";
 
 export default function AppWrapper({
   children,
@@ -43,6 +44,7 @@ export default function AppWrapper({
         </>
       )}
       {children}
+      <AvisDesktop />
       <Footer />
       <FooterDesktop />
       <CookieConsent

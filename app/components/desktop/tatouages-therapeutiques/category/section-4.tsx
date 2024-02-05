@@ -19,7 +19,6 @@ const SectionQuatreDesktop = ({ logoWhite, category }: sectionsProps) => {
       accept: "application/ld+json",
     },
   });
-  console.log(response?.data["hydra:member"]);
   return (
     <section
       id="section-4-desktop"

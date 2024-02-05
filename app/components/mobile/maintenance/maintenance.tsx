@@ -1,5 +1,5 @@
 "use client";
-import gsap from "gsap";
+import { gsap } from "gsap";
 import React, { useEffect } from "react";
 import { maintenanceProps } from "../../../lib/interfaces/interfaces";
 import { FondMobileMaintenanceImg } from "@/app/lib/svg/maintenance/fond-mobile";

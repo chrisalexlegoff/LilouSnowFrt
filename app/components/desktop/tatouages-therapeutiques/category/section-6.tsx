@@ -28,13 +28,15 @@ const SectionSixDesktop = ({ logoWhite, category }: sectionsProps) => {
         <div className="flex max-w-7xl mx-auto">
           <div className="w-1/2 mx-auto mr-12">
             <h2 className="pt-6 pb-12">Ma méthode : </h2>
-            {methode?.description.map((element: any, index: number) => {
-              return (
-                <p key={index} className="py-2">
-                  {element}
-                </p>
-              );
-            })}
+            {Object.values(methode?.description).map(
+              (element: any, index: number) => {
+                return (
+                  <p key={index} className="py-2">
+                    {element}
+                  </p>
+                );
+              }
+            )}
           </div>
           <div
             className="min-h-[25vh] w-1/2"
