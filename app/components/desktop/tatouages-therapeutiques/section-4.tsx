@@ -20,7 +20,7 @@ const SectionQuatreDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-4-desktop"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div id="before-after" className="max-w-7xl mx-auto py-12">
         <div

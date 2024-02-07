@@ -43,11 +43,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="flex flex-col text-center !text-blanc pb-10">
-        <Link
-          href={"/mentions-legales"}
-          scroll={false}
-          className="w-fit mx-auto"
-        >
+        <Link href={"/mentions-legales"} className="w-fit mx-auto">
           Mentions légales
         </Link>
       </div>
@@ -59,7 +55,6 @@ export const Footer = () => {
         <div className=" !text-blanc flex justify-center">
           <p>Site réalisé par :&nbsp;</p>
           <Link
-            scroll={false}
             href="https://dualdclic.fr"
             target="_blank"
             rel="noopener noreferrer"

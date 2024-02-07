@@ -22,7 +22,7 @@ const SectionQuatreDesktop = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-4-desktop"
-      className={`w-screen bg-blanc pb-12 ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc pb-12 ${logoWhite ? "white" : "black"}`}
     >
       <div id="before-after" className="max-w-7xl mx-auto px-8">
         <div
@@ -58,7 +58,6 @@ const SectionQuatreDesktop = ({ logoWhite, category }: sectionsProps) => {
                       <div className="w-full">
                         <Link
                           href={`mailto:${video.link.toLowerCase()}`}
-                          scroll={false}
                           passHref
                         >
                           <button className="mx-auto group w-full max-w-[230px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">

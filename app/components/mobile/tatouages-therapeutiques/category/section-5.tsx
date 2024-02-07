@@ -21,12 +21,12 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-5-category-tatoo"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md w-11/12 mx-auto pt-12">
         <p className="text-center">Mes réalisations</p>
         <div className="flex justify-center mt-4">
-          <Fleche color={"#000707"} />
+          <Fleche color={"#000707"} width="21px" height="66px" />
         </div>
       </div>
       <div id="before-after" className="max-w-md w-11/12 mx-auto pb-12">

@@ -43,7 +43,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className={`min-h-screen w-screen ${logoWhite ? "white" : "black"}`}
+      className={`min-h-screen w-full ${logoWhite ? "white" : "black"}`}
     >
       <div className="min-h-[91vh] w-full max-w-md mx-auto flex flex-col justify-around pt-32">
         <div className="text-center w-3/4 flex flex-col items-center justify-center mx-auto">
@@ -66,7 +66,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
         </div>
         <Link href={"/#section-2"}>
           <div className="w-fit mx-auto">
-            <Fleche color="white" />
+            <Fleche color="white" width="21px" height="66px" />
           </div>
         </Link>
       </div>

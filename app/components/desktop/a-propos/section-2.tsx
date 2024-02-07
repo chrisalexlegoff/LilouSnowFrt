@@ -19,7 +19,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2-desktop"
-      className={`w-screen bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto pt-32 pb-20">
         <div className="min-h-[800px] grid grid-cols-5 bg-blanc mx-4 p-12">
@@ -67,7 +67,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
               nulla diam. Vitae, pellentesque donec hendrerit mi justo...
             </p>
             <div className="w-full">
-              <Link href="mailto:contact@lilousnow.fr" passHref scroll={false}>
+              <Link href="mailto:contact@lilousnow.fr" passHref>
                 <button className="mt-12 group w-60 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
                   <span className="texte-button group-hover:text-blanc">
                     Contactez-moi

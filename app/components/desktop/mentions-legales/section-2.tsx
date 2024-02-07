@@ -6,7 +6,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2"
-      className={`min-h-screen w-screen bg-blanc ${
+      className={`min-h-screen w-full bg-blanc ${
         logoWhite ? "white" : "black"
       }`}
     >
@@ -99,12 +99,14 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
           cas responsable de l’utilisation faite de ces informations, etde tout
           préjudice direct ou indirect pouvant en découler.
         </p>
-        <h2 className="pt-12 pb-4">4 - Propriété intellectuelle</h2>{" "}
+        <h2 className="pt-12 pb-4">
+          4 - Propriété intellectuelle et contrefaçons
+        </h2>{" "}
         <p className="pt-6 text-justify">
-          ET CONTREFACONS Laureen PICHON est le propriétaire des droits de
-          propriété intellectuelle ou détient les droits d’usage sur tous les
-          éléments accessibles sur le site, notamment les textes, images,
-          graphismes, logo, icônes, sons, logiciels.
+          Laureen PICHON est le propriétaire des droits de propriété
+          intellectuelle ou détient les droits d’usage sur tous les éléments
+          accessibles sur le site, notamment les textes, images, graphismes,
+          logo, icônes, sons, logiciels.
         </p>
         <p className="pt-6 text-justify">
           Toute reproduction, représentation, modification, publication,

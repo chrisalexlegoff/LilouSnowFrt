@@ -7,7 +7,7 @@ const SectionQuatreDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-4-desktop"
-      className={`w-screen bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-5 py-24 w-full px-8">
         <div className="h-full w-full col-span-2">

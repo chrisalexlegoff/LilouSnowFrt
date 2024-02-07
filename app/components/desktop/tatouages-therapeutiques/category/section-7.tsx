@@ -7,7 +7,7 @@ const SectionSeptDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-7-desktop"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <ContactDesktop classname="max-w-7xl mx-4 my-8 py-12 px-20 bg-blanc flex flex-wrap justify-center" />
     </section>

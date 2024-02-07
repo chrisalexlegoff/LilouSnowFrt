@@ -5,7 +5,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-1"
-      className={`w-screen ${logoWhite ? "white" : "black"}`}
+      className={`w-full ${logoWhite ? "white" : "black"}`}
     >
       <div className="w-full mx-auto">
         <div

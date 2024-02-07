@@ -5,7 +5,7 @@ import React from "react";
 
 const ErrorDesktop = ({ logoWhite }: sectionsProps) => {
   return (
-    <section id="error" className={`w-screen ${logoWhite ? "white" : "black"}`}>
+    <section id="error" className={`w-full ${logoWhite ? "white" : "black"}`}>
       <div className="w-full mx-auto">
         <div
           className="text-center min-h-screen w-full flex flex-col items-center justify-center"
@@ -22,18 +22,14 @@ const ErrorDesktop = ({ logoWhite }: sectionsProps) => {
               Ce n’est pas grave, voici de quoi retrouver votre chemin :{" "}
             </p>
             <div className="w-full flex justify-between">
-              <Link href="/" scroll={false} passHref>
+              <Link href="/" passHref>
                 <button className="min-w-[263px] mx-4 group group hover:bg-blanc h-20 block border-2 border-blanc text-blanc">
                   <span className="texte-button group-hover:text-encre-de-chine">
                     Retour à l'accueil
                   </span>
                 </button>
               </Link>
-              <Link
-                href="mailto:lilousnow.cica@gmail.com"
-                scroll={false}
-                passHref
-              >
+              <Link href="mailto:lilousnow.cica@gmail.com" passHref>
                 <button className="group mx-4 min-w-[263px] group hover:bg-blanc h-20 block border-2 border-blanc text-blanc">
                   <span className="texte-button group-hover:text-encre-de-chine">
                     Contactez-moi

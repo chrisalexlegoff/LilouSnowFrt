@@ -6,7 +6,7 @@ const SectionCinq = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-5"
-      className={`min-h-screen w-screen bg-blanc ${
+      className={`min-h-screen w-full bg-blanc ${
         logoWhite ? "white" : "black"
       }`}
     >
@@ -36,7 +36,7 @@ const SectionCinq = ({ logoWhite }: sectionsProps) => {
           pouvez également me contacter directement.
         </p> */}
         <div className="w-full">
-          <Link href="mailto:contact@lilousnow.fr" passHref scroll={false}>
+          <Link href="mailto:contact@lilousnow.fr" passHref>
             <button className="group mx-auto roup w-3/4 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
               <span className="texte-button group-hover:text-blanc">
                 Contactez-moi

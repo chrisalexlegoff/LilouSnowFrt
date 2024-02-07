@@ -27,7 +27,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
               <section
                 key={index}
                 id={`section-${index + 2}`}
-                className={`min-h-screen w-screen ${
+                className={`min-h-screen w-full ${
                   index % 2 == 0 ? "black bg-encre-de-chine" : "white bg-blanc"
                 }`}
               >
@@ -49,16 +49,18 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
                       <Hexagone
                         colorPath={index % 2 == 0 ? "#FFFFFF" : "#000707"}
                         colorFond={index % 2 == 0 ? "#000707" : "#FFFFFF"}
+                        width="215px"
+                        height="215px"
                       />
                     </div>
-                    <p className="sColP mt-6">
+                    <p className="sColP text-center mt-6">
                       {`${
                         section.nom.charAt(0).toUpperCase() +
                         section.nom.slice(1)
                       }, ${section.fonction}, ${section.lieu}`}
                     </p>
                   </div>
-                  <div className="mt-10 text-left w-full">
+                  <div className="mt-10 text-center w-full">
                     <p>{section.description && section.description}</p>
                     <p>{section.descriptionDeux && section.descriptionDeux}</p>
                     <p>
@@ -68,10 +70,9 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
                   <div className="w-full">
                     <Link
                       href={`mailto:${section.email.toLowerCase()}`}
-                      scroll={false}
                       passHref
                     >
-                      <button className="mx-auto my-24 group w-3/4 hover:bg-dore h-20 block border-2 border-dore text-dore">
+                      <button className="mx-auto mt-10 mb-24 group w-3/4 hover:bg-dore h-20 block border-2 border-dore text-dore">
                         <span className="texte-button group-hover:text-blanc">
                           en savoir plus
                         </span>

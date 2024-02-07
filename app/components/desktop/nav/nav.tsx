@@ -55,7 +55,7 @@ const NavDesktop = (): JSX.Element => {
         className="hidden h-[9vh] lg:block shadow-[0px_2px_20px_rgba(0,0,0,0.14)] fixed w-full z-50 bg-blanc"
       >
         <div className="max-w-9xl mx-8 xl:mx-16 h-full flex items-center flex-wrap flex-row">
-          <Link href="/" scroll={false} className="link p-2 mr-4 w-[182px]">
+          <Link href="/" className="link p-2 mr-4 w-[182px]">
             <LogoDesktop />
           </Link>
 
@@ -67,7 +67,6 @@ const NavDesktop = (): JSX.Element => {
             >
               <Link
                 href="/"
-                scroll={false}
                 className={
                   pathname == "/"
                     ? `${classNormal} link text-dore`
@@ -84,7 +83,6 @@ const NavDesktop = (): JSX.Element => {
             >
               <Link
                 href="/a-propos"
-                scroll={false}
                 className={
                   pathname == "/a-propos"
                     ? `${classNormal} link text-dore`
@@ -103,7 +101,6 @@ const NavDesktop = (): JSX.Element => {
             >
               <Link
                 id="tatoo-thera"
-                scroll={false}
                 // onClick={() => setSubMenuActive(!subMenuActive)}
                 href="/tatouages-therapeutiques"
                 className={
@@ -122,7 +119,6 @@ const NavDesktop = (): JSX.Element => {
             >
               <Link
                 href="/partenariat"
-                scroll={false}
                 className={
                   pathname == "/partenariat"
                     ? `${classNormal} link text-dore`
@@ -134,24 +130,22 @@ const NavDesktop = (): JSX.Element => {
             </div>
             <div
               className={`nav-desktop-link h-full ${
-                pathname == "/hommages" ? "active" : ""
+                pathname == "/hommage" ? "active" : ""
               }`}
             >
               <Link
-                scroll={false}
-                href="/hommages"
+                href="/hommage"
                 className={
-                  pathname == "/hommages"
+                  pathname == "/hommage"
                     ? `${classNormal} link text-dore`
                     : `${classNormal} link`
                 }
               >
-                Hommages
+                Hommage
               </Link>
             </div>
             <div className="nav-desktop-link h-full">
               <Link
-                scroll={false}
                 className={`${classNormal} link`}
                 href="mailto:lilousnow.cica@gmail.com"
               >
@@ -170,7 +164,6 @@ const NavDesktop = (): JSX.Element => {
                 <Link
                   key={index}
                   href={`/tatouages-therapeutiques${subBmenu.link}`}
-                  scroll={false}
                   className={
                     pathname == `/tatouages-therapeutiques${subBmenu.link}`
                       ? `${classNormal} text-dore`

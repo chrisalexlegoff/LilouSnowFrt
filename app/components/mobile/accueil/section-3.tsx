@@ -8,7 +8,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`min-h-screen w-screen bg-blanc ${
+      className={`min-h-screen w-full bg-blanc ${
         logoWhite ? "white" : "black"
       }`}
     >
@@ -22,14 +22,14 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
             pellentesque donec hendrerit mi justo...
           </p>
         </div>
-        <Fleche color="#000707" />
+        <Fleche color="#000707" width="21px" height="66px" />
         <Questions
           classname="w-full flex flex-col items-center"
           nombreElementsAffiches={3}
           isMobile
         />
         <div className="w-full">
-          <Link href="/realisations" scroll={false} passHref>
+          <Link href="/realisations" passHref>
             <button className="group mx-auto my-24 group w-3/4 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
               <span className="texte-button group-hover:text-blanc">
                 Mes réalisations

@@ -17,7 +17,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2-desktop"
-      className={`w-screen ${
+      className={`w-full ${
         logoWhite ? "white" : "black"
       } flex flex-wrap bg-blanc`}
     >
@@ -43,7 +43,12 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
                       backgroundSize: "cover",
                     }}
                   >
-                    <Hexagone colorPath={"#FFFFFF"} colorFond={"#000707"} />
+                    <Hexagone
+                      colorPath={"#FFFFFF"}
+                      colorFond={"#000707"}
+                      width="215px"
+                      height="215px"
+                    />
                   </div>
                   <h3 className="sColP mt-6 !text-blanc">
                     {`${
@@ -63,11 +68,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
                   </p>
                 </div>
                 <div className="w-full">
-                  <Link
-                    href={`mailto:${section.email.toLowerCase()}`}
-                    scroll={false}
-                    passHref
-                  >
+                  <Link href={`mailto:${section.email.toLowerCase()}`} passHref>
                     <button className="mx-auto mt-10 group w-[230px] hover:bg-dore h-16 block border-2 border-dore !text-dore">
                       <div className="texte-button group-hover:text-blanc">
                         en savoir plus

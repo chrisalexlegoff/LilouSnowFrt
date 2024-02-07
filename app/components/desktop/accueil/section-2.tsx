@@ -6,7 +6,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2-desktop"
-      className={`w-screen bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto grid grid-cols-5 py-24 w-full px-8">
         <div
@@ -27,7 +27,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
             pellentesque donec hendrerit mi justo...
           </p>
           <div className="w-full">
-            <Link href="/a-propos" scroll={false} passHref>
+            <Link href="/a-propos" passHref>
               <button className="group w-1/3 min-w-[230px] hover:bg-dore h-20 block border-2 border-dore text-dore">
                 <span className="texte-button group-hover:text-blanc">
                   en savoir plus

@@ -17,7 +17,7 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md mx-auto flex flex-col justify-around items-center py-12">
         <h2>Témoignages</h2>
@@ -44,7 +44,6 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
                     <div className="w-full">
                       <Link
                         href={`mailto:${video.link.toLowerCase()}`}
-                        scroll={false}
                         passHref
                       >
                         <button className="mx-auto group w-full max-w-[230px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">

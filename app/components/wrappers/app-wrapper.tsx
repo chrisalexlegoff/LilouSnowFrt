@@ -12,6 +12,8 @@ import ReseauxDesktop from "../widgets/reseaux-desktop";
 import { FooterDesktop } from "../desktop/footer/footer";
 import ScrollButton from "../scroll-top/scroll-button";
 import { AvisDesktop } from "../desktop/avis/index";
+import { AvisMobile } from "../mobile/avis/index";
+import ScrollToTop from "@/app/lib/helpers/scrollToTop";
 
 export default function AppWrapper({
   children,
@@ -25,6 +27,7 @@ export default function AppWrapper({
   }, []);
   return (
     <>
+      <ScrollToTop />
       <Nav />
       <NavDesktop />
       {pathname != "/maintenance" && pathname != "/" && (
@@ -44,7 +47,8 @@ export default function AppWrapper({
         </>
       )}
       {children}
-      <AvisDesktop />
+      <AvisDesktop classname="md:block hidden" />
+      <AvisMobile classname="md:hidden" />
       <Footer />
       <FooterDesktop />
       <CookieConsent
