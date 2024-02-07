@@ -27,7 +27,7 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
             pellentesque donec hendrerit mi justo.
           </p>
           <div className="w-full">
-            <Link href="/tatouages-therapeutiques" scroll={false} passHref>
+            <Link href="/tatouages-therapeutiques" passHref>
               <button className="mt-12 group group w-[300px] hover:bg-white h-20 block border-2 border-blanc text-blanc">
                 <span className="texte-button group-hover:text-encre-de-chine">
                   Voir les tatouages réalisés

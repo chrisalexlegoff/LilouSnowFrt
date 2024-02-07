@@ -4,9 +4,9 @@ import Loader from "../../loader/loader";
 import { useEffect, useState } from "react";
 import { Hexagone } from "@/app/lib/svg/divers/hexagone";
 import { Fleche } from "@/app/lib/svg/Accueil/fleche";
-import { avisProps } from "@/app/lib/interfaces/interfaces.js";
+import { avisProps } from "@/app/lib/interfaces/interfaces";
 
-export const AvisDesktop = ({ classname }: avisProps) => {
+export const AvisMobile = ({ classname }: avisProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [count, setCount] = useState(0);
   const { response, loading, error, sendData } = useAxios({
@@ -19,7 +19,6 @@ export const AvisDesktop = ({ classname }: avisProps) => {
   const testimonials = response?.data["hydra:member"].filter(
     (item: any) => item.enable
   );
-  console.log(testimonials);
   const handleOnNextClick = () => {
     setCount((count + 1) % testimonials?.length);
     setCurrentIndex(count);
@@ -31,13 +30,13 @@ export const AvisDesktop = ({ classname }: avisProps) => {
   };
   useEffect(() => {
     setInterval(() => {
-      const next = document.querySelector<HTMLElement>("#next");
+      const next = document.querySelector<HTMLElement>("#next-mobile");
       next?.click();
     }, 4000);
   }, []);
 
   return (
-    <div className={`bg-blanc ${classname}`}>
+    <div className={`bg-blanc mx-4 ${classname}`}>
       {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
       {error && <p>{error.message}</p>}
       {!loading && !error && (
@@ -70,7 +69,7 @@ export const AvisDesktop = ({ classname }: avisProps) => {
                   classname="animate-pulse rotate-90"
                 />
               </button>
-              <button id="next" onClick={handleOnNextClick}>
+              <button id="next-mobile" onClick={handleOnNextClick}>
                 <Fleche
                   color="#000707"
                   width="11px"
@@ -83,9 +82,6 @@ export const AvisDesktop = ({ classname }: avisProps) => {
           <q className="block italic mt-10">
             "{testimonials[currentIndex].commentaire}"
           </q>
-          <div className="block">
-            <p></p>
-          </div>
         </div>
       )}
     </div>

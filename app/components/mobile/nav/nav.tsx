@@ -17,7 +17,7 @@ const Nav = (): JSX.Element => {
         className="lg:hidden nav fixed bg-transparent w-full p-[30px] z-20 mix-blend-exclusion"
       >
         <div className="nav justify-between w-full mx-auto flex flex-row">
-          <Link className="h-full" href={"/"} scroll={false}>
+          <Link className="h-full" href={"/"}>
             <LogoMobileCloseImg />
           </Link>
           <button className="cursor-pointer" onClick={() => setOpen(!open)}>
@@ -31,12 +31,7 @@ const Nav = (): JSX.Element => {
         }`}
       >
         <div className=" justify-between w-full mx-auto flex flex-row">
-          <Link
-            className="h-full"
-            href={"/"}
-            scroll={false}
-            onClick={() => setOpen(!open)}
-          >
+          <Link className="h-full" href={"/"} onClick={() => setOpen(!open)}>
             <LogoMobileOpenImg />
           </Link>
           <button
@@ -47,24 +42,17 @@ const Nav = (): JSX.Element => {
           </button>
         </div>
         <div className="h-full w-4/5 mx-auto pb-32 pt-16 flex flex-col items-center justify-around">
-          <Link
-            onClick={() => setOpen(!open)}
-            className="text-center"
-            scroll={false}
-            href="/"
-          >
+          <Link onClick={() => setOpen(!open)} className="text-center" href="/">
             <h3>Accueil</h3>
           </Link>
           <Link
             onClick={() => setOpen(!open)}
             className="text-center"
             href="/a-propos"
-            scroll={false}
           >
             <h3>A propos</h3>
           </Link>
           <Link
-            scroll={false}
             onClick={() => setOpen(!open)}
             className="text-center"
             href="/tatouages-therapeutiques"
@@ -72,7 +60,6 @@ const Nav = (): JSX.Element => {
             <h3>Tatouages thérapeutiques</h3>
           </Link>
           <Link
-            scroll={false}
             onClick={() => setOpen(!open)}
             className="text-center"
             href="/partenariat"
@@ -80,18 +67,16 @@ const Nav = (): JSX.Element => {
             <h3>Partenariat</h3>
           </Link>
           <Link
-            scroll={false}
             onClick={() => setOpen(!open)}
             className="text-center"
-            href="/hommages"
+            href="/hommage"
           >
-            <h3>Hommages</h3>
+            <h3>Hommage</h3>
           </Link>
           <Link
             onClick={() => setOpen(!open)}
             className="text-center"
             href="/mentions-legales"
-            scroll={false}
           >
             <h3>Mentions légales</h3>
           </Link>

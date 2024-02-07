@@ -1,6 +1,6 @@
-import { flecheProps } from "../../interfaces/interfaces.js";
+import { flecheProps, flecheRetourUrlProps } from "../../interfaces/interfaces";
 
-export const FlecheRetourUrl = ({ color }: flecheProps) => {
+export const FlecheRetourUrl = ({ color }: flecheRetourUrlProps) => {
   return (
     <svg
       width="24"

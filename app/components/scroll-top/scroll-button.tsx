@@ -29,7 +29,7 @@ const ScrollButton = () => {
   }, []);
 
   return (
-    <>
+    <div className="md:block hidden">
       <button
         id="scroll-to-top"
         className={`${
@@ -50,7 +50,7 @@ const ScrollButton = () => {
           </div>
         </div>
       </button>
-    </>
+    </div>
   );
 };
 

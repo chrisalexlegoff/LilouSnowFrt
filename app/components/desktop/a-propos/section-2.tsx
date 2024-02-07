@@ -67,7 +67,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
               nulla diam. Vitae, pellentesque donec hendrerit mi justo...
             </p>
             <div className="w-full">
-              <Link href="mailto:contact@lilousnow.fr" passHref scroll={false}>
+              <Link href="mailto:contact@lilousnow.fr" passHref>
                 <button className="mt-12 group w-60 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
                   <span className="texte-button group-hover:text-blanc">
                     Contactez-moi

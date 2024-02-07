@@ -26,7 +26,7 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
       <div className="max-w-md w-11/12 mx-auto pt-12">
         <p className="text-center">Mes réalisations</p>
         <div className="flex justify-center mt-4">
-          <Fleche color={"#000707"} />
+          <Fleche color={"#000707"} width="21px" height="66px" />
         </div>
       </div>
       <div id="before-after" className="max-w-md w-11/12 mx-auto pb-12">

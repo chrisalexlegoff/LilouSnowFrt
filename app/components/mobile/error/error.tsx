@@ -26,7 +26,7 @@ const ErrorMobile = ({ logoWhite }: sectionsProps) => {
             </div>
           </div>
           <div className="w-full max-w-xs">
-            <Link href="/" scroll={false} passHref>
+            <Link href="/" passHref>
               <button className="mb-12 group mx-auto roup w-3/4 hover:bg-blanc h-20 block border-2 border-blanc text-blanc">
                 <span className="texte-button group-hover:text-encre-de-chine">
                   Retour à l'accueil

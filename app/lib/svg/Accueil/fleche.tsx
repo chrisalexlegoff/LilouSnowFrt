@@ -1,10 +1,11 @@
 import { flecheProps } from "../../interfaces/interfaces.js";
 
-export const Fleche = ({ color }: flecheProps) => {
+export const Fleche = ({ color, width, height, classname }: flecheProps) => {
   return (
     <svg
-      width="21"
-      height="66"
+      className={classname}
+      width={width}
+      height={height}
       viewBox="0 0 21 66"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

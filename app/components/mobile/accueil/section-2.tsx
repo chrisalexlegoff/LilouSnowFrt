@@ -28,7 +28,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           pellentesque donec hendrerit mi justo...
         </p>
         <div className="w-full">
-          <Link href="/a-propos" scroll={false} passHref>
+          <Link href="/a-propos" passHref>
             <button className="mx-auto my-24 group w-3/4 hover:bg-dore h-20 block border-2 border-dore text-dore">
               <span className="texte-button group-hover:text-blanc">
                 en savoir plus

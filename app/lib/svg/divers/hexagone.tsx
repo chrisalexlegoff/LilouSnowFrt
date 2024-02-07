@@ -9,7 +9,7 @@ export const Hexagone = ({
 }: hexogoneProps) => {
   return (
     <svg
-      className={`"-m-6 "${classname}`}
+      className={`-m-6 ${classname}`}
       width={width}
       height={height}
       viewBox="0 0 215 215"

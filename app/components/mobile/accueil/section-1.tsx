@@ -66,7 +66,7 @@ const SectionUne = ({ logoWhite }: sectionsProps) => {
         </div>
         <Link href={"/#section-2"}>
           <div className="w-fit mx-auto">
-            <Fleche color="white" />
+            <Fleche color="white" width="21px" height="66px" />
           </div>
         </Link>
       </div>

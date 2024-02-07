@@ -40,7 +40,7 @@ const SectionUneDesktop = ({ logoWhite }: sectionsProps) => {
                 <div className="mx-auto w-fit my-6">
                   <Link href={"/#section-2-desktop"}>
                     <div className="w-fit mx-auto">
-                      <Fleche color="#000707" />
+                      <Fleche color="#000707" width="21px" height="66px" />
                     </div>
                   </Link>
                 </div>
@@ -51,11 +51,7 @@ const SectionUneDesktop = ({ logoWhite }: sectionsProps) => {
                 </p>
               </div>
               <div className="w-2/3">
-                <Link
-                  href="mailto:lilousnow.cica@gmail.com"
-                  scroll={false}
-                  passHref
-                >
+                <Link href="mailto:lilousnow.cica@gmail.com" passHref>
                   <button className="mt-12 group mx-auto roup w-3/4 hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
                     <span className="texte-button group-hover:text-blanc">
                       Contactez-moi

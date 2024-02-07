@@ -68,11 +68,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
                   </p>
                 </div>
                 <div className="w-full">
-                  <Link
-                    href={`mailto:${section.email.toLowerCase()}`}
-                    scroll={false}
-                    passHref
-                  >
+                  <Link href={`mailto:${section.email.toLowerCase()}`} passHref>
                     <button className="mx-auto mt-10 group w-[230px] hover:bg-dore h-16 block border-2 border-dore !text-dore">
                       <div className="texte-button group-hover:text-blanc">
                         en savoir plus

@@ -50,6 +50,10 @@ export interface questionsProps {
   isMobile: boolean;
 }
 
+export interface avisProps {
+  classname?: string;
+}
+
 export interface loaderProps {
   color: string;
   width: string;
@@ -61,13 +65,6 @@ export interface contactDesktopProps {
   classname?: string;
 }
 
-interface Testimonial {
-  // img: StaticImageData
-  quote: string;
-  name: string;
-  role: string;
-}
-
 export interface ScrollToTopProps {
   colorFill: string;
   colorStroke: string;
@@ -77,6 +74,14 @@ export interface ScrollToTopProps {
 
 export interface flecheProps {
   color: string;
+  width: string;
+  height: string;
+  classname?: string;
+}
+
+export interface flecheRetourUrlProps {
+  color: string;
+  classname?: string;
 }
 
 export interface hexogoneProps {

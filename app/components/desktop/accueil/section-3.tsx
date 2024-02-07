@@ -32,7 +32,7 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
             Vous avez des questions ? Voici quelques réponses couramment données
             :{" "}
           </h3>
-          <Fleche color="#000707" />
+          <Fleche color="#000707" width="21px" height="66px" />
         </div>
         <Questions
           classname="mt-12"
@@ -40,7 +40,7 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
           isMobile={false}
         />
         <div className="w-full">
-          <Link href="/realisations" scroll={false} passHref>
+          <Link href="/realisations" passHref>
             <button className="group mx-auto my-24 group w-[300px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">
               <span className="texte-button group-hover:text-blanc">
                 Voir les tatouages réalisés

@@ -59,7 +59,6 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
                       <div className="w-full">
                         <Link
                           href={`mailto:${video.link.toLowerCase()}`}
-                          scroll={false}
                           passHref
                         >
                           <button className="mx-auto group w-full max-w-[230px] hover:bg-encre-de-chine h-20 block border-2 border-encre-de-chine text-encre-de-chine">

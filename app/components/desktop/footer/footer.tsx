@@ -70,19 +70,13 @@ export const FooterDesktop = () => {
         <p className="!text-blanc flex justify-center">
           Lilou Snow, tatouages thérapeutiques&nbsp;&copy;&nbsp;copyright&nbsp;
           {CurrentDateYear} - &nbsp;{" "}
-          <Link
-            scroll={false}
-            href="/mentions-legales"
-            rel="noopener noreferrer"
-            className=""
-          >
+          <Link href="/mentions-legales" rel="noopener noreferrer" className="">
             Mentions légales
           </Link>
         </p>
         <p className="!text-blanc flex justify-center">
           site réalisé par :&nbsp;{" "}
           <Link
-            scroll={false}
             href="https://dualdclic.fr"
             target="_blank"
             rel="noopener noreferrer"

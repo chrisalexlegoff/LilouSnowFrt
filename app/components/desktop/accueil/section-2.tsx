@@ -27,7 +27,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
             pellentesque donec hendrerit mi justo...
           </p>
           <div className="w-full">
-            <Link href="/a-propos" scroll={false} passHref>
+            <Link href="/a-propos" passHref>
               <button className="group w-1/3 min-w-[230px] hover:bg-dore h-20 block border-2 border-dore text-dore">
                 <span className="texte-button group-hover:text-blanc">
                   en savoir plus

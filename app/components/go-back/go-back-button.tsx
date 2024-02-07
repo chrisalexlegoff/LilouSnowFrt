@@ -2,9 +2,9 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 import { FlecheRetourUrl } from "@/app/lib/svg/divers/fleche-retour-url";
-import { retourProps } from "@/app/lib/interfaces/interfaces.js";
+import { flecheRetourUrlProps } from "@/app/lib/interfaces/interfaces";
 
-export const GoBackButton = ({ color, classname }: retourProps) => {
+export const GoBackButton = ({ color, classname }: flecheRetourUrlProps) => {
   const router = useRouter();
 
   return (
