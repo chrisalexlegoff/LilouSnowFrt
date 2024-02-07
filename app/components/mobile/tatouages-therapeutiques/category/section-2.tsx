@@ -6,7 +6,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md w-10/12 mx-auto flex flex-col justify-around items-center text-white">
         <p className="text-justify min-h-60 pt-12">

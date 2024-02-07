@@ -14,7 +14,7 @@ const Nav = (): JSX.Element => {
     <>
       <div
         id="main-nav-mobile"
-        className="lg:hidden nav fixed bg-transparent w-screen p-[30px] z-20 mix-blend-exclusion"
+        className="lg:hidden nav fixed bg-transparent w-full p-[30px] z-20 mix-blend-exclusion"
       >
         <div className="nav justify-between w-full mx-auto flex flex-row">
           <Link className="h-full" href={"/"} scroll={false}>
@@ -26,7 +26,7 @@ const Nav = (): JSX.Element => {
         </div>
       </div>
       <div
-        className={`fixed h-[90%] md:h-full w-screen bg-white p-[30px] transform duration-700 z-20 ${
+        className={`fixed h-[90%] md:h-full w-full bg-white p-[30px] transform duration-700 z-20 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >

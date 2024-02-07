@@ -18,7 +18,7 @@ const SectionSixDesktop = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-6-desktop"
-      className={`w-screen bg-encre-de-chine p-12 ${
+      className={`w-full bg-encre-de-chine p-12 ${
         logoWhite ? "white" : "black"
       }`}
     >

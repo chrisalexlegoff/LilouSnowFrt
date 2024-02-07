@@ -13,11 +13,9 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2"
-      className={`min-h-screen w-screen bg-blanc ${
-        logoWhite ? "white" : "black"
-      }`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
-      <div className="max-w-md mx-auto flex flex-col justify-around items-center text-white py-6">
+      {/* <div className="max-w-md mx-auto flex flex-col justify-around items-center text-white py-6">
         <p className="filtre my-2">Filtrer par type de thérapie :</p>
         <div className="relative text-encre-de-chine max-w-xs w-full bg-[#EFEFEF] my-6">
           <select
@@ -43,8 +41,8 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
             })}
           </select>
         </div>
-      </div>
-      <div
+      </div> */}
+      {/* <div
         className="min-h-[40vh] w-full"
         style={{
           backgroundImage: `url('/img/mobile/temoignages/temoignages-mobile-fond-haut.png')`,
@@ -52,7 +50,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-      />
+      /> */}
       <div className="max-w-md w-10/12 mx-auto flex flex-col justify-around items-center text-white">
         <h2 className="py-10">Toutes les réalisations</h2>
         <p className="text-justify min-h-60">

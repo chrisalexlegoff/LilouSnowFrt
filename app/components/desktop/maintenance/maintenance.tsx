@@ -86,7 +86,7 @@ const MaintenanceComponentDesktop = ({}: maintenanceProps) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className="min-h-screen w-screen"
+      className="min-h-screen w-full"
     >
       <div className="open bg-gris-transparent w-1/2 min-w-[700px] text-center px-4">
         <div className="flex flex-col min-h-screen justify-around py-16 items-center">

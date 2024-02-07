@@ -27,7 +27,7 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
               <section
                 key={index}
                 id={`section-${index + 2}`}
-                className={`min-h-screen w-screen ${
+                className={`min-h-screen w-full ${
                   index % 2 == 0 ? "black bg-encre-de-chine" : "white bg-blanc"
                 }`}
               >
@@ -49,6 +49,8 @@ const SectionDeux = ({ logoWhite }: sectionsProps) => {
                       <Hexagone
                         colorPath={index % 2 == 0 ? "#FFFFFF" : "#000707"}
                         colorFond={index % 2 == 0 ? "#000707" : "#FFFFFF"}
+                        width="215px"
+                        height="215px"
                       />
                     </div>
                     <p className="sColP mt-6">

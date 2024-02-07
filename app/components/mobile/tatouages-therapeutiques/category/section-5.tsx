@@ -21,7 +21,7 @@ const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-5-category-tatoo"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md w-11/12 mx-auto pt-12">
         <p className="text-center">Mes réalisations</p>

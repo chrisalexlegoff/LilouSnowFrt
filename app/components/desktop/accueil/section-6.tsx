@@ -12,7 +12,7 @@ const SectionSixDesktop = ({ logoWhite }: sectionsProps) => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      className={`w-screen py-12 ${logoWhite ? "white" : "black"}`}
+      className={`w-full py-12 ${logoWhite ? "white" : "black"}`}
     >
       <div
         className="min-h-[80vh] w-full max-w-2xl mx-auto flex flex-col justify-around"

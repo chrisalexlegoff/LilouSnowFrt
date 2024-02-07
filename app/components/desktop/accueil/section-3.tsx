@@ -9,7 +9,7 @@ const SectionTroisDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3-desktop"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl p-8 mx-auto w-3/4 flex flex-col justify-around items-center pt-24">
         <FloconSectionTroisAccueilDesktop

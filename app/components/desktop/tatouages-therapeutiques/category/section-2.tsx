@@ -23,7 +23,7 @@ const SectionDeuxDesktop = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-2-desktop"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-around items-center py-6 px-8">
         {/* <div className="w-full my-6">

@@ -6,7 +6,7 @@ const SectionCinqDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-5-desktop"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-5xl mx-auto flex flex-col justify-around items-center px-20 py-24">
         <h2>Mes tarifs</h2>

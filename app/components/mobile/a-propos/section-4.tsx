@@ -6,7 +6,7 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`min-h-screen w-screen bg-blanc ${
+      className={`min-h-screen w-full bg-blanc ${
         logoWhite ? "white" : "black"
       }`}
     >
@@ -34,7 +34,7 @@ const SectionQuatre = ({ logoWhite }: sectionsProps) => {
           pellentesque donec hendrerit mi justo.
         </p>
         <div className="w-full">
-          <Link href="/mes-partenaires" scroll={false} passHref>
+          <Link href="/partenariat" scroll={false} passHref>
             <button className="my-12 group mx-auto roup w-3/4 hover:bg-dore h-20 block border-2 border-dore text-dore">
               <span className="texte-button group-hover:text-blanc">
                 Voir mes partenaires

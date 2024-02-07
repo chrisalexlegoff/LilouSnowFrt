@@ -63,7 +63,7 @@ const MaintenanceComponentMobile = ({}: maintenanceProps) => {
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
-        className="min-h-screen w-screen md:hidden"
+        className="min-h-screen w-full md:hidden"
       >
         <div
           style={{

@@ -17,7 +17,7 @@ const SectionTrois = ({ logoWhite, category }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`w-screen bg-blanc ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-md mx-auto flex flex-col justify-around items-center py-12">
         <h2>Témoignages</h2>

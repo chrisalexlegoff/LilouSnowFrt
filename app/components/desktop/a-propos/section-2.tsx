@@ -19,7 +19,7 @@ const SectionDeuxDesktop = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-2-desktop"
-      className={`w-screen bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
+      className={`w-full bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
       <div className="max-w-7xl mx-auto pt-32 pb-20">
         <div className="min-h-[800px] grid grid-cols-5 bg-blanc mx-4 p-12">

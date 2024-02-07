@@ -82,6 +82,9 @@ export interface flecheProps {
 export interface hexogoneProps {
   colorFond: string;
   colorPath: string;
+  width: string;
+  height: string;
+  classname?: string;
 }
 
 export interface videoProps {

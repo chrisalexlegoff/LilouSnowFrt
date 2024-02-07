@@ -6,7 +6,7 @@ const SectionCinq = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-5"
-      className={`min-h-screen w-screen bg-blanc ${
+      className={`min-h-screen w-full bg-blanc ${
         logoWhite ? "white" : "black"
       }`}
     >

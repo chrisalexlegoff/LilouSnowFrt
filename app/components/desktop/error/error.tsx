@@ -5,7 +5,7 @@ import React from "react";
 
 const ErrorDesktop = ({ logoWhite }: sectionsProps) => {
   return (
-    <section id="error" className={`w-screen ${logoWhite ? "white" : "black"}`}>
+    <section id="error" className={`w-full ${logoWhite ? "white" : "black"}`}>
       <div className="w-full mx-auto">
         <div
           className="text-center min-h-screen w-full flex flex-col items-center justify-center"

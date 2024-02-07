@@ -6,7 +6,7 @@ const SectionTrois = ({ logoWhite }: sectionsProps) => {
   return (
     <section
       id="section-3"
-      className={`min-h-screen w-screen bg-encre-de-chine ${
+      className={`min-h-screen w-full bg-encre-de-chine ${
         logoWhite ? "white" : "black"
       }`}
     >
