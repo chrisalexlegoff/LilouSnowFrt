@@ -170,7 +170,7 @@ const NavDesktop = (): JSX.Element => {
                       : `${classNormal}`
                   }
                 >
-                  {subBmenu.slug}
+                  {subBmenu.menuLink}
                 </Link>
               );
             })}
