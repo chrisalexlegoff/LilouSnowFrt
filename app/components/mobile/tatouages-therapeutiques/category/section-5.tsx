@@ -1,105 +1,89 @@
 "use client";
-import React, { useRef } from "react";
+import React from "react";
 import { sectionsProps } from "../../../../lib/interfaces/interfaces";
 import useAxios from "@/app/lib/interfaces/use-axios";
 import Loader from "../../../loader/loader";
-import { Slider } from "../../../before-after/beforeAfter";
-import { Fleche } from "@/app/lib/svg/Accueil/fleche";
+import { FondTarifImg } from "@/app/lib/svg/tarif/fond-tarif-desktop";
 
 const SectionCinq = ({ logoWhite, category }: sectionsProps) => {
-  const ref = useRef<HTMLDivElement>(null);
-  const handleClick = (key: number) => {
-    ref.current?.children[key].classList.toggle("visible");
-  };
   const { response, loading, error, sendData } = useAxios({
     method: "get",
-    url: "/avant_apres",
+    url: "/tarifs",
     headers: {
       accept: "application/ld+json",
     },
   });
+  const tarifs = response?.data["hydra:member"].filter(
+    (el: any) => el.categorie === category?.toLowerCase()
+  );
   return (
     <section
-      id="section-5-category-tatoo"
-      className={`w-full bg-blanc ${logoWhite ? "white" : "black"}`}
+      id="section-5-tarifs-mobiles"
+      className={`w-full bg-encre-de-chine ${logoWhite ? "white" : "black"}`}
     >
-      <div className="max-w-md w-11/12 mx-auto pt-12">
-        <p className="text-center">Mes réalisations</p>
-        <div className="flex justify-center mt-4">
-          <Fleche color={"#000707"} width="21px" height="66px" />
-        </div>
+      <div className="max-w-lg p-4 mx-auto py-12">
+        <h2 className="pt-6 pb-12 text-center">Tarifs</h2>
+        <p className="py-2 text-justify">
+          Mes tarifs sont en dessous des prix pratiqués par les autres
+          prestataires car mon but est d’aider le plus grand nombre d’entre
+          vous.
+        </p>
+        <p className="py-2 text-justify">
+          Le paiement a lieu en début de séance. Vous pouvez si vous souhaitez
+          les espacer, les stopper pour quelques raisons que ce soit : il n’y a
+          aucune obligation de continuer les soins.
+        </p>
       </div>
-      <div id="before-after" className="max-w-md w-11/12 mx-auto pb-12">
-        <div ref={ref} className="relative pt-10">
-          {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
-          {error && <p>{error.message}</p>}
-          {!loading &&
-            !error &&
-            response?.data["hydra:member"]
-              .filter((el: any) => el.categorie === category?.toLowerCase())
-              .map((el: any, index: number) => {
-                return (
-                  <div
-                    key={index}
-                    className="my-10 w-full mx-auto flex flex-col cursor-pointer"
-                  >
-                    <Slider
-                      imageSrcBefore={`${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName}`}
-                      imageSrcAfter={`${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName}`}
-                    />
-                    <p
-                      className="slider-text text-center"
-                      onClick={() => handleClick(index)}
-                    >
-                      Voir plus de détails ...
+      <div className="flex flex-wrap">
+        {loading && <Loader color={"#000707"} width={"53"} height={"45px"} />}
+        {error && <p>{error.message}</p>}
+        {!loading &&
+          !error &&
+          tarifs?.map((tarif: any, index: number) => {
+            return (
+              <div key={index} className="w-full text-center mx-auto">
+                {/* <FondTarifImg /> */}
+                <div
+                  className="min-h-[725px] flex flex-col items-center justify-center"
+                  style={{
+                    backgroundImage: `url('/img/mobile/tarif/fond-tarif-mobile.png')`,
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "contain",
+                  }}
+                >
+                  <div className="text z-10 flex flex-col justify-center max-w-sm">
+                    <p className="text-center !text-encre-de-chine">
+                      {tarif.titre}
                     </p>
-                    <p
-                      className="slider-text-alt text-center"
-                      onClick={() => handleClick(index)}
-                    >
-                      Fermer ...
+                    <p className="pt-4 text-center !text-[#0EA7C9]">
+                      {tarif.tarifs}
                     </p>
-                    <div
-                      className="AB-invisible px-6 mt-12"
-                      onClick={() => handleClick(index)}
-                    >
-                      <div
-                        className="min-h-72 grayscale -translate-y-12"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.avantName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                      >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Avant
-                        </span>
-                      </div>
-                      <p className="txt -translate-y-12 pt-6 pb-12 text-justify">
-                        {el.avantText}
+                    <div className="pt-4">
+                      <p className="text-left !text-encre-de-chine">
+                        {tarif.horaires ? tarif.horaires : ""} <br /> Comprend :
                       </p>
-                      <div
-                        className="min-h-72 -translate-y-12 grayscale-[75%]"
-                        style={{
-                          backgroundImage: `url(${process.env.NEXT_PUBLIC_IMAGES_URL}/${el.apresName})`,
-                          backgroundPosition: "center",
-                          backgroundRepeat: "no-repeat",
-                          backgroundSize: "cover",
-                        }}
-                      >
-                        <span className="block w-full absolute bottom-0 text-blanc text-center py-2">
-                          Après
-                        </span>
-                      </div>
-                      <p className="txt -translate-y-12 pt-6 pb-12 text-justify">
-                        {el.apresText}
-                      </p>
+                      {Object.entries(tarif?.contenuSeance)
+                        .slice(0, 5)
+                        .map((element: any, index: number) => {
+                          return (
+                            <p
+                              key={index}
+                              className="text-left !text-encre-de-chine"
+                            >
+                              {`+ ${element}`}
+                            </p>
+                          );
+                        })}
                     </div>
+                    <p className="pt-4 text-justify !text-encre-de-chine">
+                      {tarif.description}
+                    </p>
                   </div>
-                );
-              })}
-        </div>
+                </div>
+              </div>
+            );
+          })}
       </div>
     </section>
   );
